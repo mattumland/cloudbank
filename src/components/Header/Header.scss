@@ -18,12 +18,15 @@
     flex-direction: row;
     background: $gdGreenSolid;
     border-bottom: solid $gdGreenSolid 10px;
+    text-decoration: none;
 
-    .roll-btn, .saved-btn, button{
+    .roll-btn, .saved-btn, .btn, a {
       width: 7.2vw;
       height: 50px;
       font-size: 14px;
       padding: 4px;
+      background: white;
+      color: black;
 
       &:hover {
         @include transition;
@@ -34,6 +37,10 @@
       }
     }
 
+    .active-btn {
+      background: $gdGreenSolid;
+      color: white
+    }
 
   }
 }

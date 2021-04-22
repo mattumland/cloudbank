@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import "./Header.scss";
 
 const Header = () => {
@@ -11,18 +12,33 @@ const Header = () => {
         <ol>
           <li><button data='roll' className='roll-btn'>ROLL</button></li>
           <li><button data='saved' className='saved-btn'>SAVED</button></li>
-          <li><button data='bell' className='bell-btn'>THE BELL</button></li>
-          <li><button data='floor1' className='floor1-btn'>FLOOR 1</button></li>
-          <li><button data='floor2'className='floor2-btn'>FLOOR 2</button></li>
-          <li><button data='floor3.1'className='floor3.1-btn'>FLOOR 3.1</button></li>
-          <li><button data='floor3.2' className='floor3.2-btn'>FLOOR 3.2</button></li>
-          <li><button data='floor3.3'className='floor3.3-btn'>FLOOR 3.3</button></li>
-          <li><button data='floor3.4'className='floor3.4-btn'>FLOOR 3.4</button></li>
-          <li><button data='floor3.5'className='floor3.5-btn'>FLOOR 3.5</button></li>
-          <li><button data='floor3.6'className='floor3.6-btn'>FLOOR 3.6</button></li>
-          <li><button data='floor3.7'className='floor3.7-btn'>FLOOR 3.7</button></li>
-          <li><button data='floor4'className='floor4-btn'>FLOOR 4</button></li>
-          <li><button data='floor6'className='floor6-btn'>FLOOR 6</button></li>
+          <li>
+            <NavLink
+              to='/theBell'
+              className='btn'
+              activeClassName='active-btn'>
+              THE BELL
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/floor1'
+              className='btn'
+              activeClassName='active-btn'>
+              FLOOR 1
+            </NavLink>
+          </li>
+          // <li><button data='floor1' className='btn'>FLOOR 1</button></li>
+          <li><button data='floor2'className='btn'>FLOOR 2</button></li>
+          <li><button data='floor3.1'className='btn'>FLOOR 3.1</button></li>
+          <li><button data='floor3.2' className='btn'>FLOOR 3.2</button></li>
+          <li><button data='floor3.3'className='btn'>FLOOR 3.3</button></li>
+          <li><button data='floor3.4'className='btn'>FLOOR 3.4</button></li>
+          <li><button data='floor3.5'className='btn'>FLOOR 3.5</button></li>
+          <li><button data='floor3.6'className='btn'>FLOOR 3.6</button></li>
+          <li><button data='floor3.7'className='btn'>FLOOR 3.7</button></li>
+          <li><button data='floor4'className='btn'>FLOOR 4</button></li>
+          <li><button data='floor6'className='btn'>FLOOR 6</button></li>
         </ol>
       </nav>
     </header>
