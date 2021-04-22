@@ -1,0 +1,12 @@
+@mixin hide {
+  display: none;
+}
+
+@mixin headerStyle {
+  width: 100%;
+  text-align: center;
+  background: $gdGreen;
+  color: white;
+  font-size: 100px;
+  margin-bottom: -30px;
+}

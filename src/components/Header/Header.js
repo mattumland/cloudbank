@@ -5,7 +5,8 @@ const Header = () => {
 
   return (
     <header>
-      <h1 className='title-bar'>WELCOME TO CLOUDBANK</h1>
+      <h1 className='desktop-title'>WELCOME TO CLOUDBANK</h1>
+      <h1 className='mobile-title'>CLOUDBANK</h1>
       <nav className='nav-bar'>
         <ol>
           <li><button>ROLL</button></li>

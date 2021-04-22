@@ -1,22 +1,31 @@
 @import '../../index.scss';
 
-.title-bar {
-  text-align: center;
-  font-size: 80px;
+.desktop-title {
+  @include headerStyle;
+}
+
+.mobile-title {
+  @include headerStyle;
+  @include hide;
 }
 
 .nav-bar {
+ // width: 95%;
+ background: black;
+ margin: 0 auto;
 
   ol{
+    width:100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    // justify-content: space-around;
 
     button {
-      border: solid black 1px;
+      width: 7.2vw;
+      height: 50px;
+      border-bottom: solid black 1px;
       background: white;
-      font-size: 15px;
+      font-size: 14px;
       padding: 4px;
       // margin: 0 1px;
     }
