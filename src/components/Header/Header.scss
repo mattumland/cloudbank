@@ -11,18 +11,18 @@
 
 .nav-bar {
  // margin: 0 auto;
- border-bottom: solid black 1px;
+ // border-bottom: solid black 1px;
 
   ol{
     width:100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
+    background: white;
 
     .roll-btn, .saved-btn, button{
       width: 7.2vw;
       height: 50px;
-      background: white;
       font-size: 14px;
       padding: 4px;
 

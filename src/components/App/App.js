@@ -18,16 +18,14 @@ const App = () => {
       }
   }
 
-
-
-
   useEffect(() => {
     buildDicePool();
   }, []);
 
   return (
-    <main>
+    <main className='App'>
       <Header />
+      <div></div>
     </main>
   )
 
