@@ -2,7 +2,7 @@ import React, { useState, useEffect, Component } from 'react';
 import './App.scss';
 import Header from '../Header/Header';
 import Floor from '../Floor/Floor';
-import { floors } from '../../data/gdData';
+import { floors, backUpDice } from '../../data/gdData';
 import { fetchDice } from '../../data/apiCaller';
 import { cleanDiceData } from '../../utilities'
 
@@ -34,9 +34,11 @@ class App extends Component {
       .then((diceData) => {
         const newDicePool = cleanDiceData(diceData);
         console.log(newDicePool);
-        this.setState({dicePool: newDicePool});
+        this.setState({dicePool: shuffleItems(newDicePool)});
       })
-      .catch(err => console.log(err))
+      .catch((err) => {
+        this.setState({dicePool: backUpDice});
+      })
   };
 
   render() {
