@@ -1,7 +1,10 @@
-export const shuffleItems = (array) => {
+const shuffleItems = (array) => {
   return array.sort(() => 0.5 - Math.random());
 }
 
+const cleanDiceData = (diceData) => {
+    return diceData.dice.map(dice => dice.value);
+}
 
 /*
 get a bunch of dice
@@ -12,4 +15,4 @@ roll2 - roll2 return an object with the 100 value and Boolean if they’re doubl
 processCount - takes in .count from .encounter and returns a formatted number
 */
 
-export { shuffleItems };
+export { shuffleItems, cleanDiceData };

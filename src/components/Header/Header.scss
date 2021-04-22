@@ -16,7 +16,8 @@
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    background: white;
+    background: $gdGreenSolid;
+    border-bottom: solid $gdGreenSolid 10px;
 
     .roll-btn, .saved-btn, button{
       width: 7.2vw;

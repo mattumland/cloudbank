@@ -4,8 +4,9 @@ import './Floor.scss';
 const Floor = () => {
 
   //props: encounter list, floor number
+  //start with premade list
+  //build random encounter list
 
-  
 
   return (
     <section className='floor-container'>
@@ -13,7 +14,7 @@ const Floor = () => {
         <button>RANDOM ENCOUNTERS</button>
         <button>ENCOUNTER LIST</button>
       </nav>
-
+      
     </section>
   )
 
