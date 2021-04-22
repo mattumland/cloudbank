@@ -2,7 +2,7 @@ import React from 'react';
 import "./Header.scss";
 
 const Header = () => {
-
+  //prop: rollFunction
   return (
     <header>
       <h1 className='desktop-title'>WELCOME TO CLOUDBANK</h1>

@@ -1,0 +1,19 @@
+@import '../../index.scss';
+
+.floor-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.floor-controls {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    width: 45vw;
+    height: 50px;
+    border-top: solid $gdGreenSolid 10px;
+    font-size: 20px;
+  }
+}
