@@ -11,14 +11,20 @@ const App = () => {
 
   const buildDicePool = async () => {
       try {
-        return fetchDice;
+        const diceResponse = await fetchDice();
+        return diceResponse;
       } catch (error) {
 
       }
   }
 
 
-  console.log(buildDicePool(), fetchDice());
+
+
+  useEffect(() => {
+    setDicePool(buildDicePool());
+    console.log(dicePool);
+  }, []);
 
   return (
     <main>
