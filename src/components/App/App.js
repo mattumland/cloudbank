@@ -12,7 +12,7 @@ const App = () => {
   const buildDicePool = async () => {
       try {
         const diceResponse = await fetchDice();
-        return diceResponse;
+        setDicePool(diceResponse);
       } catch (error) {
 
       }
@@ -22,13 +22,12 @@ const App = () => {
 
 
   useEffect(() => {
-    setDicePool(buildDicePool());
-    console.log(dicePool);
+    buildDicePool();
   }, []);
 
   return (
     <main>
-      <h1>'SUP'</h1>
+      <Header />
     </main>
   )
 

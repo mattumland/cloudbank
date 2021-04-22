@@ -1,0 +1,18 @@
+@mixin hide {
+  display: none;
+}
+
+@mixin headerStyle {
+  width: 100%;
+  text-align: center;
+  background: $gdGreen;
+  color: white;
+  font-size: 90px;
+  margin-bottom: -26px;
+}
+
+@mixin transition {
+  transform: scale(1.01);
+  transition: transform 300ms;
+  transition: all 0.2s ease-in-out;
+}
