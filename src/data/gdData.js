@@ -1,5 +1,6 @@
 export const floors = {
   'theBell': {
+    'name': 'The Bell',
     'encounters': {
       '01': {
         'description': 'Arkady making repairs',
@@ -64,6 +65,7 @@ export const floors = {
     }
   },
   'floor1': {
+    'name': 'Reception & Habitation',
     'encounters': {
       '01': {
         'description': 'Forgotten Androids',
@@ -127,6 +129,7 @@ export const floors = {
     }
   },
   'floor2': {
+    'name': 'EDEN',
     'encounters': {
       '01': {
         'description': 'Chosen Androids',
@@ -191,6 +194,7 @@ export const floors = {
     }
   },
   'floor3.1': {
+    'name': 'Maintenance Zone',
     'encounters': {
       '01': {
         'description': 'Forgotten Androids',
@@ -255,6 +259,7 @@ export const floors = {
     }
   },
   'floor3.2': {
+    'name': 'Skeleton Works',
     'encounters': {
       '01': {
         'description': 'Bee Drones' ,
@@ -319,6 +324,7 @@ export const floors = {
     }
   },
   'floor3.3': {
+    'name': 'Pseudoflesh Farms',
     'encounters': {
       '01': {
         'description': 'Silus Makes Demands',
@@ -383,6 +389,7 @@ export const floors = {
     }
   },
   'floor3.4': {
+    'name': 'Brain Construction',
     'encounters': {
       '01': {
         'description': 'Escaped Child Androids from HEL seeking the Mind Thief' ,
@@ -447,6 +454,7 @@ export const floors = {
     }
   },
   'floor3.5': {
+    'name': 'Dis/Assembly',
     'encounters': {
       '01': {
         'description': 'Forgotten Androids',
@@ -511,6 +519,7 @@ export const floors = {
     }
   },
   'floor3.6': {
+    'name': 'Storage',
     'encounters': {
       '01': {
         'description': 'Forgotten Androids',
@@ -575,6 +584,7 @@ export const floors = {
     }
   },
   'floor3.7': {
+    'name': `'Quality Assurance'`,
     'encounters': {
       '01': {
         'description': 'Divers',
@@ -639,6 +649,7 @@ export const floors = {
     }
   },
   'floor4': {
+    'name': 'Human Emulation Labs',
     'encounters': {
       '01': {
         'description': 'Escaped Child Androids' ,
@@ -704,6 +715,7 @@ export const floors = {
     }
   },
   'floor6': {
+    'name': 'Engineering & Support',
     'encounters': {
       '01': {
         'description': 'Forgotten Androids',
