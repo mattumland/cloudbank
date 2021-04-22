@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <main>
-      <h1>'SUP'</h1>
+      <Header />
     </main>
   )
 

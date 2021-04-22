@@ -1,0 +1,24 @@
+@import '../../index.scss';
+
+.title-bar {
+  text-align: center;
+  font-size: 80px;
+}
+
+.nav-bar {
+
+  ol{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-around;
+
+    button {
+      border: solid black 1px;
+      background: white;
+      font-size: 15px;
+      padding: 4px;
+      // margin: 0 1px;
+    }
+  }
+}
