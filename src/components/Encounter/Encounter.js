@@ -1,34 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { rollDice, d100 } from '../../utilities';
 import './Encounter.scss';
 
 const Encounter = ({ floor, eData, id }) => {
+  const [count, setCount] = useState('');
+  const [description, setDescription] = useState('');
+  const [reference, setReference] = useState('');
+  const [attititude, setAttitude] = useState('');
+  const [distance, setDistance] = useState('');
+  const [strength, setStrength] = useState('');
 
-  //set default values, assign new values after checking contents of eData
-  let count = '';
-  let description = '';
-  let reference = '';
-  let attititude = ''; //positive friendly negative hostile
-  let distance = ''; //nearby far away
-  let strength = ''; // strong weak
-  // let reroll = (eData.count || eData.tags)
+
 
   const createDescription = () => {
     if (eData.count) {
-      count = rollDice(eData.count);
+      setCount(rollDice(eData.count));
     }
 
     if (count === 1) {
-      description = `A ${eData.description}`
+      setDescription(`A ${eData.description}`)
     } else if (count > 1) {
-      description = `${count} ${eData.description}s`;
+      setDescription(`${count} ${eData.description}s`);
     } else {
-      description = eData.description;
+      setDescription(eData.description);
     }
 
     if (eData.reference) {
-      reference = `(${eData.reference})`
+      setReference(`(${eData.reference})`)
     }
   }
 
@@ -36,25 +35,25 @@ const Encounter = ({ floor, eData, id }) => {
     const roll1 = d100();
     const roll2 = d100();
     if (roll1.value > 50) {
-      distance = 'nearby';
+      setDistance('nearby');
     } else {
-      distance = 'far away';
+      setDistance('far away');
     }
 
     if (roll2.value > 50) {
-      strength = 'strong';
+      setStrength('strong');
     } else {
-      strength = 'weak';
+      setStrength('weak');
     }
 
     if (roll2.value % 2 === 0 && roll2.isDouble) {
-      attititude = 'friendly';
+      setAttitude('friendly');
     }  else if (roll2.value % 2 === 0 && !roll2.isDouble) {
-        attititude = 'positive';
+        setAttitude('positive');
     }  else if (roll2.value % 2 != 0 && roll2.isDouble) {
-        attititude = 'hostile';
+        setAttitude('hostile');
     }  else if (roll2.value % 2 != 0 && !roll2.isDouble) {
-        attititude = 'negative';
+        setAttitude('negative');
     }
   }
 
@@ -63,11 +62,10 @@ const Encounter = ({ floor, eData, id }) => {
     createDescription();
   }
 
-  createSituation();
-  createDescription();
-
   useEffect(() => {
-  },[])
+    createSituation();
+    createDescription();
+  },[distance])
 
   return (
     <aside className='encounter-container'>
@@ -85,8 +83,8 @@ const Encounter = ({ floor, eData, id }) => {
         {eData.tags!=='short' && (
           <button onClick={reroll}>REROLL</button>)
         }
+        <button>DELETE</button>
       </div>
-
     </aside>
   )
 

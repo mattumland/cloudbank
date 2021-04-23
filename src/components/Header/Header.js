@@ -28,7 +28,6 @@ const Header = () => {
               FLOOR 1
             </NavLink>
           </li>
-          // <li><button data='floor1' className='btn'>FLOOR 1</button></li>
           <li><button data='floor2'className='btn'>FLOOR 2</button></li>
           <li><button data='floor3.1'className='btn'>FLOOR 3.1</button></li>
           <li><button data='floor3.2' className='btn'>FLOOR 3.2</button></li>
