@@ -7,6 +7,8 @@ const Encounter = ({ floor, eData, id }) => {
   return (
     <aside className='encounter-container'>
       <h2 className='description'>{`${eData.count} ${eData.description} (${eData.reference})`}</h2>
+      <button>SAVE</button>
+      <button>REROLL</button>
     </aside>
   )
 
@@ -14,7 +16,7 @@ const Encounter = ({ floor, eData, id }) => {
 
 export default Encounter;
 
-Encounter.PropTypes = {
+Encounter.propTypes = {
   floor: PropTypes.string,
   eData: PropTypes.object,
   id: PropTypes.number

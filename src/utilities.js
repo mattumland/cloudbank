@@ -10,6 +10,10 @@ export const getID = () => {
   return Date.now();
 }
 
+export const formatIndex = (num) => {
+  return ((num === 0) ? '10' : `0${num}`)
+}
+
 /*
 get a bunch of dice
 get a bunch of names
