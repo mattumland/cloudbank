@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Floor.scss';
 import Encounter from '../Encounter/Encounter';
-import { getID, formatIndex, rollDice } from '../../utilities';
+import { getID, formatIndex, rollDice, formatRoll } from '../../utilities';
 
 const Floor = ({ floorName, encounters }) => {
 
@@ -22,8 +22,9 @@ const Floor = ({ floorName, encounters }) => {
 
   const rollEncounter = () => {
     const roll = rollDice('1.10')
-    const newEncounter = encounters[formatIndex(roll)];
-    console.log(newEncounter);
+    const newEncounter = encounters[formatRoll(roll)];
+    console.log(encounters['10'])
+    console.log(newEncounter, roll);
     setRanEnc([...randomEncounterList, newEncounter]);
   }
 
