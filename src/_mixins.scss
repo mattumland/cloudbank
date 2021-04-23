@@ -16,3 +16,8 @@
   transition: transform 300ms;
   transition: all 0.2s ease-in-out;
 }
+
+@mixin floorBorder {
+  border-left: solid $gdGreen 2px;
+  border-right: solid $gdGreen 2px;  
+}

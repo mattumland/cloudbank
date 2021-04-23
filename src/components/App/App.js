@@ -22,15 +22,12 @@ class App extends Component {
     fetchDice()
       .then((diceData) => {
         const newDicePool = cleanDiceData(diceData);
-        console.log(newDicePool);
         this.setState({dicePool: shuffleItems(newDicePool)});
       })
       .catch((err) => {
         this.setState({dicePool: backUpDice});
       })
   };
-
-
 
   render() {
     return (
@@ -39,7 +36,6 @@ class App extends Component {
         <Route
           exact path="/:floor"
           render={({ match })=> {
-            {console.log(match.params.floor)}
             return <Floor
             floorName={this.state.floorData[match.params.floor].name}
             dice={this.state.dicePool}

@@ -1,16 +1,20 @@
 @import '../../index.scss';
 
 .floor-container {
+  @include floorBorder;
   width: 90%;
   margin: 0 auto;
+
 }
 
 .floor-controls {
+  @include floorBorder;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
 
   button {
+    border: none;
     width: 45vw;
     height: 50px;
     font-size: 20px;
