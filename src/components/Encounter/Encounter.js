@@ -11,7 +11,7 @@ const Encounter = ({ floor, eData, id }) => {
   const [distance, setDistance] = useState('');
   const [strength, setStrength] = useState('');
 
-  // console.log(eData);
+
 
   const createDescription = () => {
     if (eData.count) {
@@ -62,7 +62,6 @@ const Encounter = ({ floor, eData, id }) => {
     createDescription();
   }
 
-
   useEffect(() => {
     createSituation();
     createDescription();
@@ -84,8 +83,8 @@ const Encounter = ({ floor, eData, id }) => {
         {eData.tags!=='short' && (
           <button onClick={reroll}>REROLL</button>)
         }
+        <button>DELETE</button>
       </div>
-
     </aside>
   )
 

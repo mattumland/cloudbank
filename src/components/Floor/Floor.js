@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './Floor.scss';
 import Encounter from '../Encounter/Encounter';
@@ -7,15 +7,19 @@ import { getID, formatIndex, rollDice, formatRoll } from '../../utilities';
 const Floor = ({ floorName, encounters }) => {
 
   const [randomEncounterList, setRanEnc] = useState([]);
+  const [premadeEncounterList, setPreEnc] = useState([])
 
-  const encounterKeys = Object.keys(encounters);
-  const encounterList = encounterKeys.reduce((list,key, index) => {
-    const nonRepeatList = [0,1,4,7];
-    if (nonRepeatList.includes(index)) {
-      list.push(encounters[key]);
-    }
-    return list
-  }, [])
+  const createEncounterList = () => {
+    const encounterKeys = Object.keys(encounters);
+    const encounterList = encounterKeys.reduce((list,key, index) => {
+      const nonRepeatList = [0,1,4,7];
+      if (nonRepeatList.includes(index)) {
+        list.push(encounters[key]);
+      }
+      return list
+    }, [])
+    setPreEnc(encounterList);
+  }
 
   //use state to hold both of these lists
   //build random encounter list
@@ -23,12 +27,10 @@ const Floor = ({ floorName, encounters }) => {
   const rollEncounter = () => {
     const roll = rollDice('1.10')
     const newEncounter = encounters[formatRoll(roll)];
-    console.log(encounters['10'])
-    console.log(newEncounter, roll);
     setRanEnc([...randomEncounterList, newEncounter]);
   }
 
-  const preMadeEncounters = encounterList.map((encounter, index) => {
+  const preMadeEncounters = premadeEncounterList.map((encounter, index) => {
     const id = getID();
     return (
       <Encounter
@@ -56,6 +58,12 @@ const Floor = ({ floorName, encounters }) => {
 
 
   //useEffect to prevent weird rerender problem
+
+  useEffect(() => {
+    createEncounterList();
+  },[])
+
+  debugger;
 
   return (
     <section className='floor-container'>
