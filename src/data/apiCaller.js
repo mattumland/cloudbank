@@ -1,8 +1,8 @@
-const fetchDice = async () => {
-  const diceURL = 'http://roll.diceapi.com/json/2000d10';
-  const response = await fetch(diceURL);
-  const rawDice = await response.json();
-  return rawDice.dice.map(dice => dice.value);
+const fetchDice = () => {
+  return fetch('http://roll.diceapi.com/json/2000d10')
+    .then(response => {
+      return response.json()
+    })
 }
 
 // const fetchName = async () => {

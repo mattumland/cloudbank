@@ -10,21 +10,23 @@
 }
 
 .nav-bar {
- // margin: 0 auto;
- border-bottom: solid black 1px;
 
   ol{
     width:100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
+    background: $gdGreenSolid;
+    border-bottom: solid $gdGreenSolid 10px;
+    text-decoration: none;
 
-    .roll-btn, .saved-btn, button{
+    .roll-btn, .saved-btn, .btn, a {
       width: 7.2vw;
       height: 50px;
-      background: white;
       font-size: 14px;
       padding: 4px;
+      background: white;
+      color: black;
 
       &:hover {
         @include transition;
@@ -35,6 +37,10 @@
       }
     }
 
+    .active-btn {
+      background: $gdGreenSolid;
+      color: white
+    }
 
   }
 }
