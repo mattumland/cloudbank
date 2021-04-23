@@ -86,22 +86,22 @@ export const floors = {
         'tags': 'forgotten'
       },
       '04': {
-        'description': 'Distorted corporate muzak play over the intercom',
+        'description': 'Distorted corporate muzak plays over the intercom',
         'reference':'',
         'count': 0,
-        'tags': ''
+        'tags': 'short'
       },
       '05': {
-        'description': 'Distorted corporate muzak play over the intercom',
+        'description': 'Distorted corporate muzak plays over the intercom',
         'reference':'',
         'count': 0,
-        'tags': ''
+        'tags': 'short'
       },
       '06': {
-        'description': 'Distorted corporate muzak play over the intercom',
+        'description': 'Distorted corporate muzak plays over the intercom',
         'reference':'',
         'count': 0,
-        'tags': ''
+        'tags': 'short'
       },
       '07': {
         'description': 'A Security Android',
@@ -189,7 +189,7 @@ export const floors = {
         'description': 'The Minotaur',
         'reference': 'pg. 29' ,
         'count': 0,
-        'tags': ''
+        'tags': 'short'
       }
     }
   },
@@ -254,7 +254,7 @@ export const floors = {
         'description': 'Waste Disposal Body Save or 1d10 DMG' ,
         'reference':'',
         'count': 0,
-        'tags': ''
+        'tags': 'short'
       }
     }
   },
@@ -327,22 +327,22 @@ export const floors = {
     'name': 'Pseudoflesh Farm',
     'encounters': {
       '01': {
-        'description': 'Silu Make Demand',
+        'description': 'Silus Make Demands',
         'reference': 'pg. 40' ,
         'count': 0,
-        'tags': 'silu'
+        'tags': 'silus'
       },
       '02': {
-        'description': 'Silu Make Demand',
+        'description': 'Silus Make Demands',
         'reference': 'pg. 40' ,
         'count': 0,
-        'tags': 'silu'
+        'tags': 'silus'
       },
       '03': {
-        'description': 'Silu Make Demand',
+        'description': 'Silus Make Demands',
         'reference': 'pg. 40' ,
         'count': 0,
-        'tags': 'silu'
+        'tags': 'silus'
       },
       '04': {
         'description': 'Pseudomilk Eel' ,
@@ -392,19 +392,19 @@ export const floors = {
     'name': 'Brain Construction',
     'encounters': {
       '01': {
-        'description': 'Escaped Child Android from HEL seeking the Mind Thief' ,
+        'description': 'Escaped Child Android(s) from HEL seeking the Mind Thief' ,
         'reference': 'pg. 45',
         'count': '1.5',
         'tags': ''
       },
       '02': {
-        'description': 'Escaped Child Android from HEL seeking the Mind Thief' ,
+        'description': 'Escaped Child Android(s) from HEL seeking the Mind Thief' ,
         'reference': 'pg. 45',
         'count': '1.5',
         'tags': ''
       },
       '03': {
-        'description': 'Escaped Child Android from HEL seeking the Mind Thief' ,
+        'description': 'Escaped Child Android(s) from HEL seeking the Mind Thief' ,
         'reference': 'pg. 45',
         'count': '1.5',
         'tags': ''
@@ -475,31 +475,31 @@ export const floors = {
         'tags': 'forgotten'
       },
       '04': {
-        'description': 'Failed Android looking to escape Disassembly ',
+        'description': 'Failed Android(s) looking to escape Disassembly ',
         'reference': 'pg. 49',
         'count': '1.5',
         'tags': ''
       },
       '05': {
-        'description': 'Failed Android looking to escape Disassembly ',
+        'description': 'Failed Android(s) looking to escape Disassembly ',
         'reference': 'pg. 49',
         'count': '1.5',
         'tags': ''
       },
       '06': {
-        'description': 'Failed Android looking to escape Disassembly ',
+        'description': 'Failed Android(s) looking to escape Disassembly ',
         'reference': 'pg. 49',
         'count': '1.5',
         'tags': ''
       },
       '07': {
-        'description': 'Security Android chasing escapee',
+        'description': 'Security Android chasing escapees',
         'reference':'pg. 10',
         'count': '1.10',
         'tags': ''
       },
       '08': {
-        'description': 'Security Android chasing escapee',
+        'description': 'Security Android chasing escapees',
         'reference':'pg. 10',
         'count': '1.10',
         'tags': ''
@@ -540,19 +540,19 @@ export const floors = {
         'tags': 'forgotten'
       },
       '04': {
-        'description': 'Failed Android looking to escape Disassembly ',
+        'description': 'Failed Android(s) looking to escape Disassembly ',
         'reference': 'pg. 49',
         'count': '1.10',
         'tags': ''
       },
       '05': {
-        'description': 'Failed Android looking to escape Disassembly ',
+        'description': 'Failed Android(s) looking to escape Disassembly ',
         'reference': 'pg. 49',
         'count': '1.10',
         'tags': ''
       },
       '06': {
-        'description': 'Failed Android looking to escape Disassembly ',
+        'description': 'Failed Android(s) looking to escape Disassembly ',
         'reference': 'pg. 49',
         'count': '1.10',
         'tags': ''
@@ -641,7 +641,7 @@ export const floors = {
         'tags': 'ghost'
       },
       '10': {
-        'description': 'Exact duplicate of the crew (+1d10 Bend & Bend Check)',
+        'description': 'Exact duplicates of the crew (+1d10 Bend & Bend Check)',
         'reference': 'pg. 10',
         'count': '1.10',
         'tags': ''

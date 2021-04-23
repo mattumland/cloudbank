@@ -27,7 +27,7 @@ export const rollDice = (diceCount) => {
 
 export const d100 = () => {
   const value = rollDice('1.100');
-  const digits = value.split('');
+  const digits = value.toString().split('');
   const isDouble = (digits[0]=== digits[1]);
   return {'value': value, 'isDouble': isDouble };
 }

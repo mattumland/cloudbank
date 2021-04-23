@@ -4,7 +4,7 @@ import './Floor.scss';
 import Encounter from '../Encounter/Encounter';
 import { getID, formatIndex } from '../../utilities';
 
-const Floor = ({ floorName, encounters, dice }) => {
+const Floor = ({ floorName, encounters }) => {
 
   const [randomEncounters, updateRanEnc] = useState([]);
 
@@ -28,7 +28,6 @@ const Floor = ({ floorName, encounters, dice }) => {
         eData={encounter}
         id={id+index}
         key={id+index}
-        dice={dice}
         list={'preMade'}
       />
     )
