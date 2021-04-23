@@ -3,19 +3,19 @@ export const floors = {
     'name': 'The Bell',
     'encounters': {
       '01': {
-        'description': 'Arkady making repairs',
+        'description': 'Arkady making repair',
         'reference': 'pg. 17',
         'count': 0 ,
         'tags': ''
       },
       '02': {
-        'description': 'Arkady making repairs',
+        'description': 'Arkady making repair',
         'reference': 'pg. 17',
         'count': 0 ,
         'tags': ''
       },
       '03': {
-        'description': 'Arkady making repairs',
+        'description': 'Arkady making repair',
         'reference': 'pg. 17',
         'count': 0 ,
         'tags': ''
@@ -39,19 +39,19 @@ export const floors = {
         'tags': ''
       },
       '07': {
-        'description': 'Random new Mercenary for hire arrives',
+        'description': 'Random new Mercenary for hire arrive',
         'reference':'' ,
         'count': 0,
         'tags': 'name'
       },
       '08': {
-        'description': 'Random new Mercenary for hire arrives',
+        'description': 'Random new Mercenary for hire arrive',
         'reference':'' ,
         'count': 0,
         'tags': 'name'
       },
       '09': {
-        'description': 'New Diver arrives',
+        'description': 'New Diver arrive',
         'reference':'' ,
         'count': 0,
         'tags': 'name'
@@ -68,37 +68,37 @@ export const floors = {
     'name': 'Reception & Habitation',
     'encounters': {
       '01': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.5',
         'tags': 'forgotten'
       },
       '02': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.5',
         'tags': 'forgotten'
       },
       '03': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.5',
         'tags': 'forgotten'
       },
       '04': {
-        'description': 'Distorted corporate muzak plays over the intercom',
+        'description': 'Distorted corporate muzak play over the intercom',
         'reference':'',
         'count': 0,
         'tags': ''
       },
       '05': {
-        'description': 'Distorted corporate muzak plays over the intercom',
+        'description': 'Distorted corporate muzak play over the intercom',
         'reference':'',
         'count': 0,
         'tags': ''
       },
       '06': {
-        'description': 'Distorted corporate muzak plays over the intercom',
+        'description': 'Distorted corporate muzak play over the intercom',
         'reference':'',
         'count': 0,
         'tags': ''
@@ -122,7 +122,7 @@ export const floors = {
         'tags': 'name'
       },
       '10': {
-        'description': 'Troubleshooters' ,
+        'description': 'Troubleshooter' ,
         'reference': 'pg. 14',
         'count': '1.10',
         'tags': 'name'
@@ -132,37 +132,37 @@ export const floors = {
     'name': 'EDEN',
     'encounters': {
       '01': {
-        'description': 'Chosen Androids',
+        'description': 'Chosen Android',
         'reference': 'pg. 24',
         'count': '1.5',
         'tags': ''
       },
       '02': {
-        'description': 'Chosen Androids',
+        'description': 'Chosen Android',
         'reference': 'pg. 24',
         'count': '1.5',
         'tags': ''
       },
       '03': {
-        'description': 'Chosen Androids',
+        'description': 'Chosen Android',
         'reference': 'pg. 24',
         'count': '1.5',
         'tags': ''
       },
       '04': {
-        'description': 'Fallen Androids',
+        'description': 'Fallen Android',
         'reference': 'pg. 24',
         'count': '1.10',
         'tags': ''
       },
       '05': {
-        'description': 'Fallen Androids',
+        'description': 'Fallen Android',
         'reference': 'pg. 24',
         'count': '1.10',
         'tags': ''
       },
       '06': {
-        'description': 'Fallen Androids',
+        'description': 'Fallen Android',
         'reference': 'pg. 24',
         'count': '1.10',
         'tags': ''
@@ -197,37 +197,37 @@ export const floors = {
     'name': 'Maintenance Zone',
     'encounters': {
       '01': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.10',
         'tags': 'forgotten'
       },
       '02': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.10',
         'tags': 'forgotten'
       },
       '03': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.10',
         'tags': 'forgotten'
       },
       '04': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.10',
         'tags': ''
       },
       '05': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.10',
         'tags': ''
       },
       '06': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.10',
         'tags': ''
@@ -259,52 +259,52 @@ export const floors = {
     }
   },
   'floor3.2': {
-    'name': 'Skeleton Works',
+    'name': 'Skeleton Work',
     'encounters': {
       '01': {
-        'description': 'Bee Drones' ,
+        'description': 'Bee Drone' ,
         'reference': 'pg. 38',
         'count': '2.10',
         'tags': ''
       },
       '02': {
-        'description': 'Bee Drones' ,
+        'description': 'Bee Drone' ,
         'reference': 'pg. 38',
         'count': '2.10',
         'tags': ''
       },
       '03': {
-        'description': 'Bee Drones' ,
+        'description': 'Bee Drone' ,
         'reference': 'pg. 38',
         'count': '2.10',
         'tags': ''
       },
       '04': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.10',
         'tags': 'forgotten'
       },
       '05': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.10',
         'tags': 'forgotten'
       },
       '06': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.10',
         'tags': 'forgotten'
       },
       '07': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.10',
         'tags': ''
       },
       '08': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.10',
         'tags': ''
@@ -324,52 +324,52 @@ export const floors = {
     }
   },
   'floor3.3': {
-    'name': 'Pseudoflesh Farms',
+    'name': 'Pseudoflesh Farm',
     'encounters': {
       '01': {
-        'description': 'Silus Makes Demands',
+        'description': 'Silu Make Demand',
         'reference': 'pg. 40' ,
         'count': 0,
-        'tags': 'silus'
+        'tags': 'silu'
       },
       '02': {
-        'description': 'Silus Makes Demands',
+        'description': 'Silu Make Demand',
         'reference': 'pg. 40' ,
         'count': 0,
-        'tags': 'silus'
+        'tags': 'silu'
       },
       '03': {
-        'description': 'Silus Makes Demands',
+        'description': 'Silu Make Demand',
         'reference': 'pg. 40' ,
         'count': 0,
-        'tags': 'silus'
+        'tags': 'silu'
       },
       '04': {
-        'description': 'Pseudomilk Eels' ,
+        'description': 'Pseudomilk Eel' ,
         'reference': 'pg. 42',
         'count': '1.10',
         'tags': ''
       },
       '05': {
-        'description': 'Pseudomilk Eels' ,
+        'description': 'Pseudomilk Eel' ,
         'reference': 'pg. 42',
         'count': '1.10',
         'tags': ''
       },
       '06': {
-        'description': 'Pseudomilk Eels' ,
+        'description': 'Pseudomilk Eel' ,
         'reference': 'pg. 42',
         'count': '1.10',
         'tags': ''
       },
       '07': {
-        'description': 'Stunted Androids',
+        'description': 'Stunted Android',
         'reference':'pg. 41',
         'count': '1.5',
         'tags':''
       },
       '08': {
-        'description': 'Stunted Androids',
+        'description': 'Stunted Android',
         'reference':'pg. 41',
         'count': '1.5',
         'tags':''
@@ -392,19 +392,19 @@ export const floors = {
     'name': 'Brain Construction',
     'encounters': {
       '01': {
-        'description': 'Escaped Child Androids from HEL seeking the Mind Thief' ,
+        'description': 'Escaped Child Android from HEL seeking the Mind Thief' ,
         'reference': 'pg. 45',
         'count': '1.5',
         'tags': ''
       },
       '02': {
-        'description': 'Escaped Child Androids from HEL seeking the Mind Thief' ,
+        'description': 'Escaped Child Android from HEL seeking the Mind Thief' ,
         'reference': 'pg. 45',
         'count': '1.5',
         'tags': ''
       },
       '03': {
-        'description': 'Escaped Child Androids from HEL seeking the Mind Thief' ,
+        'description': 'Escaped Child Android from HEL seeking the Mind Thief' ,
         'reference': 'pg. 45',
         'count': '1.5',
         'tags': ''
@@ -428,13 +428,13 @@ export const floors = {
         'tags': ''
       },
       '07': {
-        'description': 'Android Dogs',
+        'description': 'Android Dog',
         'reference': 'pg. 44',
         'count':' 1.5' ,
         'tags':''
       },
       '08': {
-        'description': 'Android Dogs',
+        'description': 'Android Dog',
         'reference': 'pg. 44',
         'count':' 1.5' ,
         'tags':''
@@ -457,49 +457,49 @@ export const floors = {
     'name': 'Dis/Assembly',
     'encounters': {
       '01': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.10',
         'tags': 'forgotten'
       },
       '02': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.10',
         'tags': 'forgotten'
       },
       '03': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.10',
         'tags': 'forgotten'
       },
       '04': {
-        'description': 'Failed Androids looking to escape Disassembly ',
+        'description': 'Failed Android looking to escape Disassembly ',
         'reference': 'pg. 49',
         'count': '1.5',
         'tags': ''
       },
       '05': {
-        'description': 'Failed Androids looking to escape Disassembly ',
+        'description': 'Failed Android looking to escape Disassembly ',
         'reference': 'pg. 49',
         'count': '1.5',
         'tags': ''
       },
       '06': {
-        'description': 'Failed Androids looking to escape Disassembly ',
+        'description': 'Failed Android looking to escape Disassembly ',
         'reference': 'pg. 49',
         'count': '1.5',
         'tags': ''
       },
       '07': {
-        'description': 'Security Androids chasing escapees',
+        'description': 'Security Android chasing escapee',
         'reference':'pg. 10',
         'count': '1.10',
         'tags': ''
       },
       '08': {
-        'description': 'Security Androids chasing escapees',
+        'description': 'Security Android chasing escapee',
         'reference':'pg. 10',
         'count': '1.10',
         'tags': ''
@@ -522,49 +522,49 @@ export const floors = {
     'name': 'Storage',
     'encounters': {
       '01': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.10',
         'tags': 'forgotten'
       },
       '02': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.10',
         'tags': 'forgotten'
       },
       '03': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.10',
         'tags': 'forgotten'
       },
       '04': {
-        'description': 'Failed Androids looking to escape Disassembly ',
+        'description': 'Failed Android looking to escape Disassembly ',
         'reference': 'pg. 49',
         'count': '1.10',
         'tags': ''
       },
       '05': {
-        'description': 'Failed Androids looking to escape Disassembly ',
+        'description': 'Failed Android looking to escape Disassembly ',
         'reference': 'pg. 49',
         'count': '1.10',
         'tags': ''
       },
       '06': {
-        'description': 'Failed Androids looking to escape Disassembly ',
+        'description': 'Failed Android looking to escape Disassembly ',
         'reference': 'pg. 49',
         'count': '1.10',
         'tags': ''
       },
       '07': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.10',
         'tags': ''
       },
       '08': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.10',
         'tags': ''
@@ -587,49 +587,49 @@ export const floors = {
     'name': `'Quality Assurance'`,
     'encounters': {
       '01': {
-        'description': 'Divers',
+        'description': 'Diver',
         'reference': '',
         'count': '1.5',
         'tags': 'name'
       },
       '02': {
-        'description': 'Divers',
+        'description': 'Diver',
         'reference': '',
         'count': '1.5',
         'tags': 'name'
       },
       '03': {
-        'description': 'Divers',
+        'description': 'Diver',
         'reference': '',
         'count': '1.5',
         'tags': 'name'
       },
       '04': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.10',
         'tags': ''
       },
       '05': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.10',
         'tags': ''
       },
       '06': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.10',
         'tags': ''
       },
       '07': {
-        'description': 'Infiltrator Android of NPC the crew as already met',
+        'description': 'Infiltrator Android of NPC the crew a already met',
         'reference': 'pg. 10',
         'count': 0 ,
         'tags': ''
       },
       '08': {
-        'description': 'Infiltrator Android of NPC the crew as already met',
+        'description': 'Infiltrator Android of NPC the crew a already met',
         'reference': 'pg. 10',
         'count': 0 ,
         'tags': ''
@@ -641,7 +641,7 @@ export const floors = {
         'tags': 'ghost'
       },
       '10': {
-        'description': 'Exact duplicates of the crew (+1d10 Bends & Bends Check)',
+        'description': 'Exact duplicate of the crew (+1d10 Bend & Bend Check)',
         'reference': 'pg. 10',
         'count': '1.10',
         'tags': ''
@@ -649,52 +649,52 @@ export const floors = {
     }
   },
   'floor4': {
-    'name': 'Human Emulation Labs',
+    'name': 'Human Emulation Lab',
     'encounters': {
       '01': {
-        'description': 'Escaped Child Androids' ,
+        'description': 'Escaped Child Android' ,
         'reference': 'pg. 54',
         'count': '1.10',
         'tags': 'child'
       },
       '02': {
-        'description': 'Escaped Child Androids' ,
+        'description': 'Escaped Child Android' ,
         'reference': 'pg. 54',
         'count': '1.10',
         'tags': 'child'
       },
       '03': {
-        'description': 'Escaped Child Androids' ,
+        'description': 'Escaped Child Android' ,
         'reference': 'pg. 54',
         'count': '1.10',
         'tags': 'child'
       },
       '04': {
-        'description': 'Former CLOUDBANK Research Scientists',
+        'description': 'Former CLOUDBANK Research Scientist',
         'reference': '',
         'count': '1.5',
         'tags': 'name'
       },
       '05': {
-        'description': 'Former CLOUDBANK Research Scientists',
+        'description': 'Former CLOUDBANK Research Scientist',
         'reference': '',
         'count': '1.5',
         'tags': 'name'
       },
       '06': {
-        'description': 'Former CLOUDBANK Research Scientists',
+        'description': 'Former CLOUDBANK Research Scientist',
         'reference': '',
         'count': '1.5',
         'tags': 'name'
       },
       '07': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.5',
         'tags': ''
       },
       '08': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.5',
         'tags': ''
@@ -718,43 +718,43 @@ export const floors = {
     'name': 'Engineering & Support',
     'encounters': {
       '01': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.5',
         'tags': 'forgotten'
       },
       '02': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.5',
         'tags': 'forgotten'
       },
       '03': {
-        'description': 'Forgotten Androids',
+        'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
         'count': '1.5',
         'tags': 'forgotten'
       },
       '04': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.5',
         'tags': ''
       },
       '05': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.5',
         'tags': ''
       },
       '06': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.5',
         'tags': ''
       },
       '07': {
-        'description': 'Security Androids',
+        'description': 'Security Android',
         'reference':'pg. 10',
         'count': '1.5',
         'tags': ''
@@ -772,7 +772,7 @@ export const floors = {
         'tags': ''
       },
       '10': {
-        'description': 'Troubleshooters' ,
+        'description': 'Troubleshooter' ,
         'reference': 'pg. 14',
         'count': '1.10',
         'tags': 'name'
@@ -790,7 +790,7 @@ export const backUpDice = [4,6,5,5,9,3,5,4,6,2,9,8,10,8,9,1,7,7,10,2,5,4,9,5,10,
 /*additionalTables
   forgotten androids
   troubleshooter details
-  silus makes demands
+  silu make demands
   ghost in the machine
   cryopods
 

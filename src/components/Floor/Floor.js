@@ -6,6 +6,8 @@ import { getID, formatIndex } from '../../utilities';
 
 const Floor = ({ floorName, encounters, dice }) => {
 
+  const [randomEncounters, updateRanEnc] = useState([]);
+
   const encounterKeys = Object.keys(encounters);
   const encounterList = encounterKeys.reduce((list,key, index) => {
     const nonRepeatList = [0,1,4,7];
@@ -15,6 +17,7 @@ const Floor = ({ floorName, encounters, dice }) => {
     return list
   }, [])
 
+  //use state to hold both of these lists
   //build random encounter list
 
   const preMadeEncounters = encounterList.map((encounter, index) => {
@@ -25,10 +28,13 @@ const Floor = ({ floorName, encounters, dice }) => {
         eData={encounter}
         id={id+index}
         key={id+index}
+        dice={dice}
         list={'preMade'}
       />
     )
   })
+
+  //useEffect to prevent weird rerender problem
 
   return (
     <section className='floor-container'>

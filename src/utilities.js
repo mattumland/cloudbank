@@ -1,3 +1,5 @@
+import { backUpDice } from './data/gdData';
+
 export const shuffleItems = (array) => {
   return array.sort(() => 0.5 - Math.random());
 }
@@ -12,6 +14,22 @@ export const getID = () => {
 
 export const formatIndex = (num) => {
   return ((num === 0) ? '10' : `0${num}`)
+}
+
+export const rollDice = (diceCount) => {
+  const diceData = diceCount.split('.');
+  let value = 0
+  for (let i = 0; i < diceData[0]; i++) {
+    value =+ value + (1 + Math.floor(Math.random()*diceData[1]))
+  }
+  return value;
+}
+
+export const d100 = () => {
+  const value = rollDice('1.100');
+  const digits = value.split('');
+  const isDouble = (digits[0]=== digits[1]);
+  return {'value': value, 'isDouble': isDouble };
 }
 
 /*
