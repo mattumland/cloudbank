@@ -37,6 +37,7 @@ const Floor = ({ floorName, encounters }) => {
 
   return (
     <section className='floor-container'>
+      <h2 className='floor-title'>{floorName}</h2>
       <nav className='floor-controls'>
         <button>RANDOM ENCOUNTERS</button>
         <button>ENCOUNTER LIST</button>

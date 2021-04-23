@@ -4,7 +4,14 @@
   @include floorBorder;
   width: 70%;
   margin: 0 auto;
+}
 
+.floor-title {
+  background: $gdGreenSolid;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  padding: 0 0 10px 0;
 }
 
 .floor-controls {
