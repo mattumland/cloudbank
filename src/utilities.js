@@ -7,7 +7,7 @@ export const cleanDiceData = (diceData) => {
 }
 
 export const getID = () => {
-  return Date().now;
+  return Date.now();
 }
 
 /*

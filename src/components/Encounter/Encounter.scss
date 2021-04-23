@@ -1,0 +1,14 @@
+@import '../../index.scss';
+
+.encounter-container {
+  width: 300px;
+  background: black;
+  border: solid $gdGreenSolid 2px;
+
+  .description {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+  }
+}

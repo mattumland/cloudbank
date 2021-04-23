@@ -9,17 +9,17 @@ const Floor = ({ floorName, encounters, dice }) => {
   const encounterKeys = Object.keys(encounters);
   const encounterList = encounterKeys.map(key => encounters[key])
 
-  //start with premade list
+
   //build random encounter list
 
-  const preMadeEncounters = encounterList.map(encounter => {
+  const preMadeEncounters = encounterList.map((encounter, index) => {
     const id = getID();
     return (
       <Encounter
         floor={floorName}
-        encounterData={encounter}
-        id={id}
-        key={id}
+        eData={encounter}
+        id={id+index}
+        key={id+index}
       />
     )
   })
@@ -32,7 +32,9 @@ const Floor = ({ floorName, encounters, dice }) => {
         <button>RANDOM ENCOUNTERS</button>
         <button>ENCOUNTER LIST</button>
       </nav>
-      {preMadeEncounters}
+      <section className='encounter-grid'>
+        {preMadeEncounters}
+      </section>
     </section>
   )
 
