@@ -1,11 +1,11 @@
 @import '../../index.scss';
 
 .encounter-container {
-  width: 280px;
+  width: 100%;
   background: black;
   border: solid $gdGreenSolid 2px;
   padding: 10px;
-  margin: 10px 0 10px 0;
+  @include encounterMarg;
 
   .description {
     font-size: 18px;

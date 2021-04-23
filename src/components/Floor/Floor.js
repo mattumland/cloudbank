@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Floor.scss';
 import Encounter from '../Encounter/Encounter';
-import { getID, formatIndex } from '../../utilities';
+import { getID, formatIndex, rollDice } from '../../utilities';
 
 const Floor = ({ floorName, encounters }) => {
 
-  const [randomEncounters, updateRanEnc] = useState([]);
+  const [randomEncounterList, setRanEnc] = useState([]);
 
   const encounterKeys = Object.keys(encounters);
   const encounterList = encounterKeys.reduce((list,key, index) => {
@@ -19,6 +19,13 @@ const Floor = ({ floorName, encounters }) => {
 
   //use state to hold both of these lists
   //build random encounter list
+
+  const rollEncounter = () => {
+    const roll = rollDice('1.10')
+    const newEncounter = encounters[formatIndex(roll)];
+    console.log(newEncounter);
+    setRanEnc([...randomEncounterList, newEncounter]);
+  }
 
   const preMadeEncounters = encounterList.map((encounter, index) => {
     const id = getID();
@@ -33,6 +40,20 @@ const Floor = ({ floorName, encounters }) => {
     )
   })
 
+  const randomEncounters = randomEncounterList.map((encounter, index) => {
+    const id = getID();
+    return (
+      <Encounter
+        floor={floorName}
+        eData={encounter}
+        id={id+index}
+        key={id+index}
+        list={'random'}
+      />
+    )
+  })
+
+
   //useEffect to prevent weird rerender problem
 
   return (
@@ -43,11 +64,16 @@ const Floor = ({ floorName, encounters }) => {
         <button>ENCOUNTER LIST</button>
       </nav>
       <section className='encounter-grid'>
-        {preMadeEncounters}
+        <div className='premade'>
+          {preMadeEncounters}
+        </div>
+        <div className='random'>
+          {randomEncounters}
+          <button onClick={rollEncounter}className='new-random'>+</button>
+        </div>
       </section>
     </section>
   )
-
 }
 
 export default Floor
@@ -57,11 +83,3 @@ Floor.propTypes = {
   encounters: PropTypes.object,
   dice: PropTypes.array,
 };
-
-
-// console.log(list.encounters[key].description, list.encounters[index+1].description)
-// console.log(list.encounters[key].description != list.encounters[index+1].description);
-// if (!list.includes(encounters[key].description)) {
-//   list.push(encounters[key])
-// }
-// console.log('after if',list)

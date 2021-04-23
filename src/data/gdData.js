@@ -39,25 +39,25 @@ export const floors = {
         'tags': ''
       },
       '07': {
-        'description': 'Random new Mercenary for hire arrive',
+        'description': 'Random new Mercenary for hire arrives',
         'reference':'' ,
         'count': 0,
         'tags': 'name'
       },
       '08': {
-        'description': 'Random new Mercenary for hire arrive',
+        'description': 'Random new Mercenary for hire arrives',
         'reference':'' ,
         'count': 0,
         'tags': 'name'
       },
       '09': {
-        'description': 'New Diver arrive',
+        'description': 'New Diver arrives',
         'reference':'' ,
         'count': 0,
         'tags': 'name'
       },
       '10': {
-        'description': 'Messenger from Commander Kilroy',
+        'description': 'Messenger from Cmdr. Kilroy',
         'reference':'pg. 15' ,
         'count': 0,
         'tags': 'name'

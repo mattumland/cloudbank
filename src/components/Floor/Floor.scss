@@ -1,7 +1,7 @@
 @import '../../index.scss';
 
 .floor-container {
-  @include floorBorder;
+  // @include floorBorder;
   width: 70%;
   margin: 0 auto;
 }
@@ -15,7 +15,7 @@
 }
 
 .floor-controls {
-  @include floorBorder;
+  // @include floorBorder;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -28,3 +28,28 @@
 
   }
 }
+
+  .encounter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 0px;
+  }
+
+  .premade {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  .random {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .new-random {
+    width: 100%;
+    background: $gdGreen;
+    color: white;
+    font-size: 60px;
+    border: solid $gdGreenSolid 5px;
+    @include encounterMarg;
+  }
