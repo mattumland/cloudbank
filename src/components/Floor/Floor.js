@@ -2,52 +2,56 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './Floor.scss';
 import Encounter from '../Encounter/Encounter';
-import { getID, formatIndex, rollDice, formatRoll } from '../../utilities';
+import { getID, formatIndex, rollDice, d100, formatRoll, addDice } from '../../utilities';
 
-const Floor = ({ floorName, encounters }) => {
+const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}) => {
 
-  const [randomEncounterList, setRanEnc] = useState([]);
   const [premadeEncounterList, setPreEnc] = useState([])
 
-  const createEncounterList = () => {
-    const encounterKeys = Object.keys(encounters);
+  const createPremadeList = () => {
+    const encounterKeys = Object.keys(encounterData);
     const encounterList = encounterKeys.reduce((list,key, index) => {
-      const nonRepeatList = [0,1,4,7];
+      const nonRepeatList = [0,1,4,7,9];
       if (nonRepeatList.includes(index)) {
-        list.push(encounters[key]);
+        const newEncounter = encounterData[key];
+        addDice(newEncounter);
+        newEncounter.id = getID() + d100().value;
+        list.push(encounterData[key]);
       }
       return list
     }, [])
-    setPreEnc(encounterList);
+    addEncounter(encounterList, floorID, 'premade');
   }
 
   const rollEncounter = () => {
     const roll = rollDice('1.10')
-    const newEncounter = encounters[formatRoll(roll)];
-    setRanEnc([...randomEncounterList, newEncounter]);
+    const newEncounter = encounterData[formatRoll(roll)];
+    addDice(newEncounter);
+    newEncounter.id = getID() + d100().value;
+    addEncounter(newEncounter, floorID, 'random');
   }
 
-  const preMadeEncounters = premadeEncounterList.map((encounter, index) => {
-    const id = getID();
+  const preMadeEncounters = encounterList.premade.map((encounter, index) => {
     return (
       <Encounter
-        floor={floorName}
+        floor={floorID}
         eData={encounter}
-        id={id+index}
-        key={id+index}
+        key={index}
+        addEncounter={addEncounter}
+        encounterList={encounterList}
         list={'preMade'}
       />
     )
   })
 
-  const randomEncounters = randomEncounterList.map((encounter, index) => {
-    const id = getID();
+  const randomEncounters = encounterList.random.map((encounter, index) => {
     return (
       <Encounter
-        floor={floorName}
+        floor={floorID}
         eData={encounter}
-        id={id+index}
-        key={id+index}
+        key={index+1000}
+        addEncounter={addEncounter}
+        encounterList={encounterList}
         list={'random'}
       />
     )
@@ -59,11 +63,12 @@ const Floor = ({ floorName, encounters }) => {
   //roll dice in floor then pass those down to encounters for initial
 
   useEffect(() => {
-    createEncounterList();
+    createPremadeList();
   },[])
 
+
   useEffect(() => {
-    createEncounterList();
+    createPremadeList();
   },[location.pathname])
 
   return (
@@ -89,7 +94,8 @@ const Floor = ({ floorName, encounters }) => {
 export default Floor
 
 Floor.propTypes = {
+  floorID: PropTypes.string,
   floorName: PropTypes.string,
-  encounters: PropTypes.object,
-  dice: PropTypes.array,
+  encounterData: PropTypes.object,
+  addEncounter: PropTypes.func
 };

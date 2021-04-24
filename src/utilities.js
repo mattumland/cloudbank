@@ -3,13 +3,15 @@ export const shuffleItems = (array) => {
 }
 
 export const getID = () => {
-  return Date.now();
+  const rawID = Date.now().toString().split('');
+  return parseInt(shuffleItems(rawID).join(''));
 }
 
 export const formatIndex = (num) => {
   const value = ((num === 0) ? '10' : `0${num}`)
   return value.toString();
 }
+//pass in argument to pick 0 or 10 depending setting
 
 export const formatRoll = (num) => {
   const value = ((num === 10) ? '10' : `0${num}`)
@@ -30,6 +32,11 @@ export const d100 = () => {
   const digits = value.toString().split('');
   const isDouble = (digits[0]=== digits[1]);
   return {'value': value, 'isDouble': isDouble };
+}
+
+export const addDice = (encounter) => {
+  encounter.d10s = [rollDice('1.10'),rollDice('1.10'),rollDice('1.10'),rollDice('1.10'),rollDice('1.10')]
+  encounter.d100s = [d100(), d100()]
 }
 
 /*

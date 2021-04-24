@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 import Floor from '../Floor/Floor';
 import { floors } from '../../data/gdData';
 import { fetchName } from '../../data/apiCaller';
-import { cleanNameData } from '../../utilities';
+import { cleanNameData, getID } from '../../utilities';
 
 class App extends Component {
   constructor() {
@@ -13,20 +13,33 @@ class App extends Component {
     this.state = {
       floorData: floors,
       savedEncounters: [],
-      error:''
-      /*floorEncounters: [{theBell: {premade: [], random:[]}}]
-      */
+      error:'',
+      encounterLists: {
+        'theBell': {premade: [], random:[]}, //maybe saved encounters go here too
+        'floor1': {premade: [], random:[]}
+      }
     }
   }
 
+  addEncounter = (newEncounter, floor, list) => {
+    const newEncounterState = this.state.encounterLists;
+    if (list === 'random') {
+      newEncounterState[floor][list].push(newEncounter);
+    } else {
+      newEncounterState[floor][list] = newEncounter;
+    }
+    this.setState({ encounterLists: newEncounterState })
+  }
 
-//new functions to pass as props: add encounter, update encounter 
+  updateEncounter = (id, floor, list) => {
+    const newEncounterState = this.state.encounterLists;
+  }
 
   componentDidMount() {
-    fetchName()
-    .then((nameData) => {
-      console.log(nameData.character.name);
-    });
+    // fetchName()
+    // .then((nameData) => {
+    //   console.log(nameData.character.name);
+    // });
   };
 
   render() {
@@ -37,8 +50,11 @@ class App extends Component {
           exact path="/:floor"
           render={({ match })=> {
             return <Floor
+            floorID={match.params.floor}
             floorName={this.state.floorData[match.params.floor].name}
-            encounters={this.state.floorData[match.params.floor].encounters}
+            encounterData={this.state.floorData[match.params.floor].encounters}
+            encounterList={this.state.encounterLists[match.params.floor]}
+            addEncounter={this.addEncounter}
             />}}
           />
 
