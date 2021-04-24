@@ -11,10 +11,11 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
   const createPremadeList = () => {
     const encounterKeys = Object.keys(encounterData);
     const encounterList = encounterKeys.reduce((list,key, index) => {
-      const nonRepeatList = [0,1,4,7, 9];
+      const nonRepeatList = [0,1,4,7,9];
       if (nonRepeatList.includes(index)) {
         const newEncounter = encounterData[key];
         addDice(newEncounter);
+        newEncounter.id = getID() + d100().value;
         list.push(encounterData[key]);
       }
       return list
@@ -26,32 +27,31 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
     const roll = rollDice('1.10')
     const newEncounter = encounterData[formatRoll(roll)];
     addDice(newEncounter);
+    newEncounter.id = getID() + d100().value;
     addEncounter(newEncounter, floorID, 'random');
   }
 
   const preMadeEncounters = encounterList.premade.map((encounter, index) => {
-    const id = getID();
     return (
       <Encounter
         floor={floorID}
         eData={encounter}
-        id={id+index}
-        key={id+index}
+        key={index}
         addEncounter={addEncounter}
+        encounterList={encounterList}
         list={'preMade'}
       />
     )
   })
 
   const randomEncounters = encounterList.random.map((encounter, index) => {
-    const id = getID();
     return (
       <Encounter
         floor={floorID}
         eData={encounter}
-        id={id+index}
-        key={id+index}
+        key={index+1000}
         addEncounter={addEncounter}
+        encounterList={encounterList}
         list={'random'}
       />
     )
@@ -65,6 +65,7 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
   useEffect(() => {
     createPremadeList();
   },[])
+
 
   useEffect(() => {
     createPremadeList();

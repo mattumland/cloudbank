@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { } from '../../utilities';
+import { addDice } from '../../utilities';
 import './Encounter.scss';
 
 //add new prop for rolledData,
 
-const Encounter = ({ floor, eData, id, list, addEncounter }) => {
+const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
   let count = '';
   let description = '';
   let reference = '';
   let attititude = '';
   let distance = '';
   let status= '';
+
+  console.log(eData);
 
   const createDescription = () => {
     description = '';
@@ -78,8 +80,8 @@ const Encounter = ({ floor, eData, id, list, addEncounter }) => {
   createDescription();
 
   const reroll = () => {
-    createSituation();
-    createDescription();
+    addDice(eData);
+    addEncounter(eData, floor, list)
   }
 
   useEffect(() => {
@@ -120,7 +122,6 @@ export default Encounter;
 Encounter.propTypes = {
   floor: PropTypes.string,
   eData: PropTypes.object,
-  id: PropTypes.number,
   list: PropTypes.string,
   addEncounter: PropTypes.func
 }

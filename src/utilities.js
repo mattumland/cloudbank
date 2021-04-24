@@ -3,7 +3,8 @@ export const shuffleItems = (array) => {
 }
 
 export const getID = () => {
-  return Date.now();
+  const rawID = Date.now().toString().split('');
+  return parseInt(shuffleItems(rawID).join(''));
 }
 
 export const formatIndex = (num) => {

@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 import Floor from '../Floor/Floor';
 import { floors } from '../../data/gdData';
 import { fetchName } from '../../data/apiCaller';
-import { cleanNameData } from '../../utilities';
+import { cleanNameData, getID } from '../../utilities';
 
 class App extends Component {
   constructor() {
@@ -29,6 +29,10 @@ class App extends Component {
       newEncounterState[floor][list] = newEncounter;
     }
     this.setState({ encounterLists: newEncounterState })
+  }
+
+  updateEncounter = (id, floor, list) => {
+    const newEncounterState = this.state.encounterLists;
   }
 
   componentDidMount() {
