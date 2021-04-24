@@ -14,25 +14,19 @@ class App extends Component {
       floorData: floors,
       savedEncounters: [],
       error:''
+      /*floorEncounters: [{theBell: {premade: [], random:[]}}]
+      */
     }
   }
 
+
+//new functions to pass as props: add encounter, update encounter 
 
   componentDidMount() {
     fetchName()
     .then((nameData) => {
       console.log(nameData.character.name);
     });
-
-
-    // fetchDice()
-    //   .then((diceData) => {
-    //     const newDicePool = cleanDiceData(diceData);
-    //     this.setState({dicePool: shuffleItems(newDicePool)});
-    //   })
-    //   .catch((err) => {
-    //     this.setState({dicePool: backUpDice});
-    //   })
   };
 
   render() {

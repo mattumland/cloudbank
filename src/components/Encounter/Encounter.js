@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import { rollDice, d100 } from '../../utilities';
 import './Encounter.scss';
 
-const Encounter = ({ floor, eData, id }) => {
+//add new prop for rolledData,
+
+const Encounter = ({ floor, eData, id, list }) => {
   const [count, setCount] = useState('');
   const [description, setDescription] = useState('');
   const [reference, setReference] = useState('');
   const [attititude, setAttitude] = useState('');
   const [distance, setDistance] = useState('');
   const [strength, setStrength] = useState('');
-
-
 
   const createDescription = () => {
     if (eData.count) {
@@ -57,6 +57,12 @@ const Encounter = ({ floor, eData, id }) => {
     }
   }
 
+  const setUpTags = () => {
+    //switch statement that looks at tags
+    //the outcome of this sets the value of "bonus"
+    //this is a new set of data that conditionally renders
+  }
+
   const reroll = () => {
     createSituation();
     createDescription();
@@ -83,7 +89,9 @@ const Encounter = ({ floor, eData, id }) => {
         {eData.tags!=='short' && (
           <button onClick={reroll}>REROLL</button>)
         }
-        <button>DELETE</button>
+        {list==='random' && (
+          <button>DELETE</button>)
+        }
       </div>
     </aside>
   )
