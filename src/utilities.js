@@ -33,6 +33,11 @@ export const d100 = () => {
   return {'value': value, 'isDouble': isDouble };
 }
 
+export const addDice = (encounter) => {
+  encounter.d10s = [rollDice('1.10'),rollDice('1.10'),rollDice('1.10'),rollDice('1.10'),rollDice('1.10')]
+  encounter.d100s = [d100(), d100()]
+}
+
 /*
 get a bunch of dice
 get a bunch of names
