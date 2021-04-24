@@ -1,11 +1,5 @@
-import { backUpDice } from './data/gdData';
-
 export const shuffleItems = (array) => {
   return array.sort(() => 0.5 - Math.random());
-}
-
-export const cleanDiceData = (diceData) => {
-    return diceData.dice.map(dice => dice.value);
 }
 
 export const getID = () => {

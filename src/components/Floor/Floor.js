@@ -21,9 +21,6 @@ const Floor = ({ floorName, encounters }) => {
     setPreEnc(encounterList);
   }
 
-  //use state to hold both of these lists
-  //build random encounter list
-
   const rollEncounter = () => {
     const roll = rollDice('1.10')
     const newEncounter = encounters[formatRoll(roll)];
@@ -58,12 +55,16 @@ const Floor = ({ floorName, encounters }) => {
 
 
   //useEffect to prevent weird rerender problem
+  //add another create list function to call on useEffect to ensure both list are stable
+  //roll dice in floor then pass those down to encounters for initial
 
   useEffect(() => {
     createEncounterList();
   },[])
 
-  debugger;
+  useEffect(() => {
+    createEncounterList();
+  },[location.pathname])
 
   return (
     <section className='floor-container'>
