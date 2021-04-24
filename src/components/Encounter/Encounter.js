@@ -104,4 +104,5 @@ Encounter.propTypes = {
   floor: PropTypes.string,
   eData: PropTypes.object,
   id: PropTypes.number,
+  list: PropTypes.string
 }

@@ -4,17 +4,17 @@ import './Floor.scss';
 import Encounter from '../Encounter/Encounter';
 import { getID, formatIndex, rollDice, formatRoll } from '../../utilities';
 
-const Floor = ({ floorName, encounters }) => {
+const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter }) => {
 
   const [randomEncounterList, setRanEnc] = useState([]);
   const [premadeEncounterList, setPreEnc] = useState([])
 
   const createEncounterList = () => {
-    const encounterKeys = Object.keys(encounters);
+    const encounterKeys = Object.keys(encounterData);
     const encounterList = encounterKeys.reduce((list,key, index) => {
       const nonRepeatList = [0,1,4,7];
       if (nonRepeatList.includes(index)) {
-        list.push(encounters[key]);
+        list.push(encounterData[key]);
       }
       return list
     }, [])
@@ -23,8 +23,9 @@ const Floor = ({ floorName, encounters }) => {
 
   const rollEncounter = () => {
     const roll = rollDice('1.10')
-    const newEncounter = encounters[formatRoll(roll)];
+    const newEncounter = encounterData[formatRoll(roll)];
     setRanEnc([...randomEncounterList, newEncounter]);
+    addEncounter(newEncounter, floorID, 'random')
   }
 
   const preMadeEncounters = premadeEncounterList.map((encounter, index) => {
@@ -40,7 +41,7 @@ const Floor = ({ floorName, encounters }) => {
     )
   })
 
-  const randomEncounters = randomEncounterList.map((encounter, index) => {
+  const randomEncounters = encounterList.random.map((encounter, index) => {
     const id = getID();
     return (
       <Encounter
@@ -91,5 +92,5 @@ export default Floor
 Floor.propTypes = {
   floorName: PropTypes.string,
   encounters: PropTypes.object,
-  dice: PropTypes.array,
+  addEncounter: PropTypes.func,
 };

@@ -10,6 +10,7 @@ export const formatIndex = (num) => {
   const value = ((num === 0) ? '10' : `0${num}`)
   return value.toString();
 }
+//pass in argument to pick 0 or 10 depending setting
 
 export const formatRoll = (num) => {
   const value = ((num === 10) ? '10' : `0${num}`)
