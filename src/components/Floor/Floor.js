@@ -63,8 +63,6 @@ const Floor = ({ floorName, encounters }) => {
     createEncounterList();
   },[])
 
-  debugger;
-
   return (
     <section className='floor-container'>
       <h2 className='floor-title'>{floorName}</h2>

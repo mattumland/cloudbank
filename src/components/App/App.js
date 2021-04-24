@@ -3,30 +3,36 @@ import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 import Header from '../Header/Header';
 import Floor from '../Floor/Floor';
-import { floors, backUpDice } from '../../data/gdData';
-import { fetchDice } from '../../data/apiCaller';
-import { cleanDiceData } from '../../utilities'
+import { floors } from '../../data/gdData';
+import { fetchName } from '../../data/apiCaller';
+import { cleanNameData } from '../../utilities';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      dicePool: [],
       floorData: floors,
       savedEncounters: [],
       error:''
     }
   }
 
+
   componentDidMount() {
-    fetchDice()
-      .then((diceData) => {
-        const newDicePool = cleanDiceData(diceData);
-        this.setState({dicePool: shuffleItems(newDicePool)});
-      })
-      .catch((err) => {
-        this.setState({dicePool: backUpDice});
-      })
+    fetchName()
+    .then((nameData) => {
+      console.log(nameData.character.name);
+    });
+
+
+    // fetchDice()
+    //   .then((diceData) => {
+    //     const newDicePool = cleanDiceData(diceData);
+    //     this.setState({dicePool: shuffleItems(newDicePool)});
+    //   })
+    //   .catch((err) => {
+    //     this.setState({dicePool: backUpDice});
+    //   })
   };
 
   render() {
@@ -38,7 +44,6 @@ class App extends Component {
           render={({ match })=> {
             return <Floor
             floorName={this.state.floorData[match.params.floor].name}
-            dice={this.state.dicePool}
             encounters={this.state.floorData[match.params.floor].encounters}
             />}}
           />

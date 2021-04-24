@@ -1,5 +1,11 @@
-const fetchDice = () => {
-  return fetch('http://roll.diceapi.com/json/2000d10')
+import { nameIDs } from './gdData';
+import { shuffleItems } from '../utilities';
+
+
+export const fetchName = () => {
+  const id = shuffleItems(nameIDs)[0];
+
+  return fetch(`http://stapi.co/api/v1/rest/character?uid=${id}`)
     .then(response => {
       return response.json()
     })
@@ -11,5 +17,3 @@ const fetchDice = () => {
 //   const rawName = await response.json()
 //   return rawName.data.name.name_ascii;
 // }
-
-export { fetchDice }
