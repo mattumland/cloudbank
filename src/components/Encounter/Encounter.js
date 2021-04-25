@@ -110,12 +110,12 @@ const Encounter = ({ floor, eData, list, addEncounter, deleteEncounter }) => {
       <div className='btn-container'>
         {list === 'random' && (
           <>
-            <button onClick={saveEncounter}>SAVE</button>
+            <button data-cy='save' onClick={saveEncounter}>SAVE</button>
             <button onClick={reroll}>REROLL DETAILS</button>
           </>)
         }
         {list === 'saved' && (
-          <button onClick={removeEncounter}>DELETE</button>)
+          <button data-cy='delete' onClick={removeEncounter}>DELETE</button>)
         }
       </div>
     </aside>

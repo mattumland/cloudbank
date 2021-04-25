@@ -10,10 +10,11 @@ const Header = () => {
       <h1 className='mobile-title'>CLOUDBANK</h1>
       <nav className='nav-bar'>
         <ol>
-          <li><button data='roll' className='roll-btn'>ROLL</button></li>
+          <li><button data='roll' className='btn'>ROLL</button></li>
           <li>
             <NavLink
               to='/saved'
+              data-cy='savedTab'
               className='btn'
               activeClassName='active-btn'>
               SAVED
@@ -30,6 +31,7 @@ const Header = () => {
           <li>
             <NavLink
               to='/floor1'
+              data-cy='floor1'
               className='btn'
               activeClassName='active-btn'>
               FLOOR 1

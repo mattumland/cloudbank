@@ -77,11 +77,11 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
         <aside className='encounter-sidebar'>
         <h3 className='encounter-list-title'>ENCOUNTER LIST</h3>
         <ol className='encounter-list'>
-          <li>{sideBarList[0]}</li>
-          <li>{sideBarList[1]}</li>
-          <li>{sideBarList[2]}</li>
-          <li>{sideBarList[3]}</li>
-          <li>{sideBarList[4]}</li>
+          <li data-cy='sidebar' >{sideBarList[0]}</li>
+          <li data-cy='sidebar' >{sideBarList[1]}</li>
+          <li data-cy='sidebar' >{sideBarList[2]}</li>
+          <li data-cy='sidebar' >{sideBarList[3]}</li>
+          <li data-cy='sidebar' >{sideBarList[4]}</li>
         </ol>
         <div className='responsive-block'></div>
         </aside>
