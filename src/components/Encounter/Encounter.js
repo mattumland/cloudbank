@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { addDice } from '../../utilities';
 import './Encounter.scss';
 
-const Encounter = ({ floor, eData, list, addEncounter }) => {
+const Encounter = ({ floor, eData, list, addEncounter, deleteEncounter }) => {
   let count = '';
   let description = '';
   let reference = '';
@@ -82,7 +82,6 @@ const Encounter = ({ floor, eData, list, addEncounter }) => {
   createSituation();
   createDescription();
 
-
   useEffect(() => {
     createSituation();
     createDescription();
@@ -106,9 +105,14 @@ const Encounter = ({ floor, eData, list, addEncounter }) => {
       }
 
       <div className='btn-container'>
-        <button onClick={saveEncounter}>SAVE</button>
-        {eData.tags!=='short' && (
-          <button onClick={reroll}>REROLL DETAILS</button>)
+        {list === 'random' && (
+          <>
+            <button onClick={saveEncounter}>SAVE</button>
+            <button onClick={reroll}>REROLL DETAILS</button>
+          </>)
+        }
+        {list === 'saved' && (
+          <button onClick={deleteEncounter}>DELETE</button>)
         }
       </div>
     </aside>
