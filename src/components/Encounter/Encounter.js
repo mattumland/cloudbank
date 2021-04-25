@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { addDice } from '../../utilities';
 import './Encounter.scss';
 
-const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
+const Encounter = ({ floor, eData, list, addEncounter, deleteEncounter }) => {
   let count = '';
   let description = '';
   let reference = '';
@@ -11,7 +11,9 @@ const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
   let distance = '';
   let status= '';
 
-  console.log(eData);
+  //add conditional rendering to show the floor when the list is 'saved'
+
+  // console.log(eData);
 
   const createDescription = () => {
     description = '';
@@ -68,13 +70,21 @@ const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
     }
   }
 
-  createSituation();
-  createDescription();
-
   const reroll = () => {
     addDice(eData);
     addEncounter(eData, floor, list)
   }
+
+  const saveEncounter = () => {
+    addEncounter(eData, floor, 'saved')
+  }
+
+  const removeEncounter = () => {
+    deleteEncounter(eData, eData.id, floor)
+  }
+
+  createSituation();
+  createDescription();
 
   useEffect(() => {
     createSituation();
@@ -99,9 +109,14 @@ const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
       }
 
       <div className='btn-container'>
-        <button>SAVE</button>
-        {eData.tags!=='short' && (
-          <button onClick={reroll}>REROLL DETAILS</button>)
+        {list === 'random' && (
+          <>
+            <button onClick={saveEncounter}>SAVE</button>
+            <button onClick={reroll}>REROLL DETAILS</button>
+          </>)
+        }
+        {list === 'saved' && (
+          <button onClick={removeEncounter}>DELETE</button>)
         }
       </div>
     </aside>

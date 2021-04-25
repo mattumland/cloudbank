@@ -8,6 +8,9 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
 
   const [sideBarList, setSideBar] = useState([])
 
+  // console.log('list', encounterList)
+  // console.log('data', encounterData)
+
   const createSideBar = () => {
     const encounterKeys = Object.keys(encounterData);
     const encounterList = encounterKeys.reduce((list, key, index) => {
@@ -17,7 +20,6 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
             count: encounterData[key].count,
             description: encounterData[key].description
           }
-
         list.push(newEncounter);
       }
       return list
@@ -31,17 +33,17 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
     addDice(newEncounter);
     addTags(newEncounter);
     newEncounter.id = getID();
+    newEncounter.floor = floorID;
     addEncounter(newEncounter, floorID, 'random');
   }
 
-  const randomEncounters = encounterList.random.map((encounter, index) => {
+  const randomEncounter = encounterList.random.map((encounter, index) => {
     return (
       <Encounter
         floor={floorID}
         eData={encounter}
         key={index+1000}
         addEncounter={addEncounter}
-        encounterList={encounterList}
         list={'random'}
       />
     )
@@ -55,6 +57,7 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
 
   useEffect(() => {
     rollEncounter();
+    createSideBar();
   },[location.pathname])
 
   return (
@@ -65,7 +68,7 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
       <section className='encounter-grid'>
         <button onClick={rollEncounter}className='new-random'>GENERATE ENCOUNTER</button>
         <section className='encounter'>
-          {randomEncounters}
+          {randomEncounter}
         </section>
 
         <aside className='encounter-sidebar'>
