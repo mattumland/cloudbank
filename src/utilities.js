@@ -53,7 +53,7 @@ export const addTags = (encounter) => {
   switch(encounter.tags) {
     case 'name':
       fetchName()
-      .then(nameData => encounter.name = nameData.character.name)
+      .then(nameData => encounter.name = `'${nameData.character.name}'`)
       break;
   }
 }
