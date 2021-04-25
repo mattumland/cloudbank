@@ -19,13 +19,13 @@ const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
     description = '';
     if (eData.count) {
       switch(eData.count) {
-        case '1.10':
+        case '1d10':
           count = eData.d10s[0]
           break;
-        case '1.5':
+        case '1d5':
           count = Math.round((eData.d10s[0])/2)
           break;
-        case '2.10':
+        case '2d10':
           count = (eData.d10s[0] + eData.d10s[1]);
           break;
       }

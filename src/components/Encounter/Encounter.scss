@@ -3,9 +3,9 @@
 .encounter-container {
   width: 100%;
   background: black;
-  border: solid $gdGreenSolid 2px;
+  border: solid $gdGreenSolid 6px;
   padding: 10px;
-  @include encounterMarg;
+  // @include encounterMarg;
 
   .description {
     font-size: 18px;
