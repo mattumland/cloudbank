@@ -54,6 +54,7 @@ export const addTags = (encounter) => {
     case 'name':
       fetchName()
       .then(nameData => encounter.name = `'${nameData.character.name}'`)
+      .catch(err => encounter.name = `Mummy`)
       break;
   }
 }
