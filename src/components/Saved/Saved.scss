@@ -1,0 +1,10 @@
+@import '../../index.scss';
+
+.error-message {
+  width: 50%;
+  font-size: 40px;
+  background: $gdGreenSolid;
+  color: white;
+  text-align: center;
+  margin: 25px auto;
+}

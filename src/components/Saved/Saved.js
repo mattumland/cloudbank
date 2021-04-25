@@ -1,5 +1,6 @@
 import React from 'react';
 import Encounter from '..//Encounter/Encounter';
+import './Saved.scss'
 
 const Saved = ({ encounterLists, deleteEncounter, addEncounter }) => {
 
@@ -35,6 +36,9 @@ const Saved = ({ encounterLists, deleteEncounter, addEncounter }) => {
 
   return(
     <section>
+      {!savedEncounters.length && (
+        <h2 className='error-message'>No encounters have been saved</h2>
+      )}
       {savedEncounters}
     </section>
   )
