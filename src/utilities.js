@@ -17,12 +17,6 @@ export const getID = () => {
   return parseInt(shuffleItems(rawID).join(''));
 }
 
-// export const formatIndex = (num) => {
-//   const value = ((num === 0) ? '10' : `0${num}`)
-//   return value.toString();
-// }
-//pass in argument to pick 0 or 10 depending setting
-
 export const formatNum = (num, tenNum) => {
   const value = ((num === tenNum) ? '10' : `0${num}`)
   return value.toString();
@@ -55,6 +49,11 @@ export const addTags = (encounter) => {
       fetchName()
       .then(nameData => encounter.name = `'${nameData.character.name}'`)
       .catch(err => encounter.name = `Mummy`)
+      break;
+    case 'tshooter':
+      fetchName()
+      .then(nameData => encounter.name = `'${nameData.character.name}' is in charge.`)
+      .catch(err => encounter.name = `'Mummy' is in charge.`)
       break;
   }
 }

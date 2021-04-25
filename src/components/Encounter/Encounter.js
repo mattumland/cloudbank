@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { addDice } from '../../utilities';
 import './Encounter.scss';
 
-//add new prop for rolledData,
-
 const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
   let count = '';
   let description = '';
@@ -89,7 +87,7 @@ const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
   return (
     <aside className='encounter-container'>
       <h2 className='description'>{`${description} ${reference}`}</h2>
-      {eData.tags ==='name' && (
+      {eData.name && (
       <h2 className='name-tag'>{eData.name}</h2>)
       }
       {eData.tags!=='short' && (

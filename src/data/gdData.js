@@ -125,7 +125,7 @@ export const floors = {
         'description': 'Troubleshooter' ,
         'reference': 'pg. 14',
         'count': '1d10',
-        'tags': 'name'
+        'tags': 'tshooter'
     }
   },
   'floor2': {
@@ -775,7 +775,7 @@ export const floors = {
         'description': 'Troubleshooter' ,
         'reference': 'pg. 14',
         'count': '1d10',
-        'tags': 'name'
+        'tags': 'tshooter'
       }
     }
   }
@@ -786,15 +786,3 @@ export const floors = {
 export const nameIDs = [
   "CHMA0000021696",  "CHMA0000028502",  "CHMA0000134966", "CHMA0000101321", "CHMA0000053158", "CHMA0000008975",  "CHMA0000232471",  "CHMA0000087568",  "CHMA0000190805",  "CHMA0000069617",  "CHMA0000014485",  "CHMA0000047431",  "CHMA0000002879",  "CHMA0000028249",  "CHMA0000186133",  "CHMA0000024478",  "CHMA0000194356", "CHMA0000014002",  "CHMA0000025685",  "CHMA0000044996",  "CHMA0000163455",  "CHMA0000019522", "CHMA0000065492",  "CHMA0000069882",  "CHMA0000000202",  "CHMA0000016227",  "CHMA0000013115",  "CHMA0000014126",  "CHMA0000024346",  "CHMA0000246166",  "CHMA0000004601",  "CHMA0000171062",  "CHMA0000246284",  "CHMA0000019457",  "CHMA0000206808",  "CHMA0000018552",  "CHMA0000079343",  "CHMA0000097044",  "CHMA0000139680",  "CHMA0000036939",  "CHMA0000069320",  "CHMA0000025672", "CHMA0000021572",  "CHMA0000039883",  "CHMA0000010293",  "CHMA0000226538",  "CHMA0000166940",  "CHMA0000190671",  "CHMA0000016405",  "CHMA0000054476",
 ]
-
-
-
-
-/*additionalTables
-  forgotten androids
-  troubleshooter details
-  silu make demands
-  ghost in the machine
-  cryopods
-
-*/
