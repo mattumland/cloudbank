@@ -29,16 +29,21 @@
   }
 }
 
+
   .encounter-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
-    grid-column-gap: 5px;
+    grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
 
   .premade {
     grid-area: 1 / 2 / 2 / 3;
+    width: 100%;
+    text-align: center;
+    background: $gdGreenSolid;
+    color:white;
   }
 
   .random {
@@ -49,7 +54,7 @@
     width: 100%;
     background: $gdGreen;
     color: white;
-    font-size: 60px;
+    font-size: 20px;
     border: solid $gdGreenSolid 5px;
     @include encounterMarg;
   }

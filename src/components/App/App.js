@@ -24,7 +24,7 @@ class App extends Component {
   addEncounter = (newEncounter, floor, list) => {
     const newEncounterState = this.state.encounterLists;
     if (list === 'random') {
-      newEncounterState[floor][list].push(newEncounter);
+      newEncounterState[floor][list] = [newEncounter];
     } else {
       newEncounterState[floor][list] = newEncounter;
     }

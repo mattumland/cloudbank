@@ -108,9 +108,6 @@ const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
         {eData.tags!=='short' && (
           <button onClick={reroll}>REROLL</button>)
         }
-        {list==='random' && (
-          <button>DELETE</button>)
-        }
       </div>
     </aside>
   )
@@ -125,3 +122,9 @@ Encounter.propTypes = {
   list: PropTypes.string,
   addEncounter: PropTypes.func
 }
+
+
+
+// {list==='random' && (
+//   <button>DELETE</button>)
+// }

@@ -57,11 +57,6 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
     )
   })
 
-
-  //useEffect to prevent weird rerender problem
-  //add another create list function to call on useEffect to ensure both list are stable
-  //roll dice in floor then pass those down to encounters for initial
-
   useEffect(() => {
     createPremadeList();
   },[])
@@ -75,17 +70,16 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
     <section className='floor-container'>
       <h2 className='floor-title'>{floorName}</h2>
       <nav className='floor-controls'>
-        <button>RANDOM ENCOUNTERS</button>
-        <button>ENCOUNTER LIST</button>
+        <button onClick={rollEncounter}className='new-random'>GENERATE ENCOUNTER</button>
       </nav>
       <section className='encounter-grid'>
-        <div className='premade'>
-          {preMadeEncounters}
-        </div>
-        <div className='random'>
+        <section className='random'>
           {randomEncounters}
-          <button onClick={rollEncounter}className='new-random'>+</button>
-        </div>
+        </section>
+        <h3 className='premade'>ENCOUNTER LIST</h3>
+        <aside >
+          {preMadeEncounters}
+        </aside>
       </section>
     </section>
   )
@@ -99,3 +93,5 @@ Floor.propTypes = {
   encounterData: PropTypes.object,
   addEncounter: PropTypes.func
 };
+
+// <button onClick={rollEncounter}className='new-random'>roll new encounter</button>
