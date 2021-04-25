@@ -38,7 +38,7 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
     newEncounter.floor = floorID;
     setEncounter(newEncounter);
     console.log(encounterUpdate);
-    addEncounter(encounterUpdate, floorID, 'random');
+    addEncounter(newEncounter, floorID, 'random');
   }
 
   const randomEncounter = encounterList.random.map((encounter, index) => {
@@ -53,14 +53,15 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
     )
   })
 
+
   useEffect(() => {
-    rollEncounter();
     createSideBar();
+    rollEncounter();
   },[])
 
   useEffect(() => {
-    rollEncounter();
-    createSideBar();
+    // rollEncounter();
+    // createSideBar();
   },[location.pathname])
 
   return (

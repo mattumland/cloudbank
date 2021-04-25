@@ -23,7 +23,6 @@ class App extends Component {
 
   addEncounter = (newEncounter, floor, list) => {
     const newEncounterState = this.state.encounterLists;
-    // console.log(newEncounter);
     switch (list) {
       case 'random':
         newEncounterState[floor][list] = [newEncounter];
@@ -32,7 +31,6 @@ class App extends Component {
         newEncounterState[floor][list].push(newEncounter);
         break;
     }
-    // console.log(newEncounterState);
     this.setState({ encounterLists: newEncounterState })
   }
 

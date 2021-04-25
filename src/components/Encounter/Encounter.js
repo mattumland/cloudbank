@@ -86,9 +86,9 @@ const Encounter = ({ floor, eData, list, addEncounter, deleteEncounter }) => {
   createSituation();
   createDescription();
 
-  useEffect(() => {
-    reroll();
-  }, [])
+  // useEffect(() => {
+  //   reroll();
+  // }, [])
 
 // console.log(eData);
 //   console.log(description, reference, distance, attititude, status)
