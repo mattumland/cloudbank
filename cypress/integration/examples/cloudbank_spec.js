@@ -65,5 +65,12 @@ describe('Cloudbank Saved Page', () => {
 
   it('Should allow users to delete a saved encounter', () => {
     cy.get('[data-cy=delete]').click();
+    cy.get('.error-message').contains('No encounters have been saved')
   })
+
+  it('Should show a message if there are no saved encounters', () => {
+    cy.get('[data-cy=delete]').click();
+    cy.get('.error-message').contains('No encounters have been saved')
+  })
+
 })
