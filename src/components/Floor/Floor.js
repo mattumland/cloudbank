@@ -29,34 +29,9 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
     const roll = rollDice('1d10')
     const newEncounter = encounterData[formatRoll(roll)];
     addDice(newEncounter);
-    newEncounter.id = getID() + d100().value;
+    newEncounter.id = getID();
     addEncounter(newEncounter, floorID, 'random');
   }
-
-  // const createSideBar = () => {
-  //   const encounterKeys = Object.keys(encounterData);
-  //   const encounterList = encounterKeys.reduce((list,key, index) => {
-  //     const nonRepeatList = [0,1,4,7,9];
-  //     if (nonRepeatList.includes(index)) {
-  //       const newEncounter = encounterData[key];
-  //       console.log(newEncounter);
-  //     }
-  //     return list
-  //   }, [])
-  // }
-
-  // const preMadeEncounters = encounterList.premade.map((encounter, index) => {
-  //   return (
-  //     <Encounter
-  //       floor={floorID}
-  //       eData={encounter}
-  //       key={index}
-  //       addEncounter={addEncounter}
-  //       encounterList={encounterList}
-  //       list={'preMade'}
-  //     />
-  //   )
-  // })
 
   const randomEncounters = encounterList.random.map((encounter, index) => {
     return (
@@ -77,9 +52,9 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
   },[])
 
 
-  // useEffect(() => {
-  //   createPremadeList();
-  // },[location.pathname])
+  useEffect(() => {
+    rollEncounter();
+  },[location.pathname])
 
   return (
     <section className='floor-container'>
@@ -101,6 +76,7 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
           <li>{sideBarList[3]}</li>
           <li>{sideBarList[4]}</li>
         </ol>
+        <div className='responsive-block'></div>
         </aside>
       </section>
     </section>

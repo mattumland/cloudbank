@@ -12,11 +12,10 @@ class App extends Component {
     super();
     this.state = {
       floorData: floors,
-      savedEncounters: [],
       error:'',
       encounterLists: {
-        'theBell': {premade: [], random:[]}, //maybe saved encounters go here too
-        'floor1': {premade: [], random:[]}
+        'theBell': {saved: [], random:[]},
+        'floor1': {saved: [], random:[]}
       }
     }
   }

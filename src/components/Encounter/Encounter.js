@@ -106,7 +106,7 @@ const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
       <div className='btn-container'>
         <button>SAVE</button>
         {eData.tags!=='short' && (
-          <button onClick={reroll}>REROLL</button>)
+          <button onClick={reroll}>REROLL DETAILS</button>)
         }
       </div>
     </aside>
