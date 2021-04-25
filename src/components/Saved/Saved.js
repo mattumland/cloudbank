@@ -3,7 +3,7 @@ import Encounter from '..//Encounter/Encounter';
 
 const Saved = ({ encounterLists, deleteEncounter }) => {
 
-  console.log(encounterLists)
+  // console.log(encounterLists)
 
   const encounterKeys = Object.keys(encounterLists).filter(key => {
     return encounterLists[key].saved.length
@@ -15,7 +15,7 @@ const Saved = ({ encounterLists, deleteEncounter }) => {
     return list;
   }, [])
 
-  console.log(encounterData);
+  // console.log(encounterData);
 
   const savedEncounters = encounterData.map((encounter, index) => {
     return (

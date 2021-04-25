@@ -79,6 +79,10 @@ const Encounter = ({ floor, eData, list, addEncounter, deleteEncounter }) => {
     addEncounter(eData, floor, 'saved')
   }
 
+  const removeEncounter = () => {
+    deleteEncounter(eData, eData.id, floor)
+  }
+
   createSituation();
   createDescription();
 
@@ -112,7 +116,7 @@ const Encounter = ({ floor, eData, list, addEncounter, deleteEncounter }) => {
           </>)
         }
         {list === 'saved' && (
-          <button onClick={deleteEncounter}>DELETE</button>)
+          <button onClick={removeEncounter}>DELETE</button>)
         }
       </div>
     </aside>
