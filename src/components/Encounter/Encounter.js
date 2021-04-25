@@ -12,7 +12,7 @@ const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
   let status= '';
 
 
-  //add conditional rendering to show the floor when the list is 'saved' 
+  //add conditional rendering to show the floor when the list is 'saved'
 
   console.log(eData);
 
@@ -71,13 +71,18 @@ const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
     }
   }
 
-  createSituation();
-  createDescription();
-
   const reroll = () => {
     addDice(eData);
     addEncounter(eData, floor, list)
   }
+
+  const saveEncounter = () => {
+    addEncounter(eData, floor, 'saved')
+  }
+
+  createSituation();
+  createDescription();
+
 
   useEffect(() => {
     createSituation();
@@ -102,7 +107,7 @@ const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
       }
 
       <div className='btn-container'>
-        <button>SAVE</button>
+        <button onClick={saveEncounter}>SAVE</button>
         {eData.tags!=='short' && (
           <button onClick={reroll}>REROLL DETAILS</button>)
         }

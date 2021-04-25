@@ -6,7 +6,22 @@ const Saved = ({ encounterList }) => {
   const encounterKeys = Object.keys(encounterList).filter(key => {
     return encounterList[key].saved.length
   });
-  
+
+
+  // const savedEncounters = encounterList.random.map((encounter, index) => {
+  //   return (
+  //     <Encounter
+  //       floor={floorID}
+  //       eData={encounter}
+  //       key={index+1000}
+  //       addEncounter={addEncounter}
+  //       encounterList={encounterList}
+  //       list={'saved'}
+  //     />
+  //   )
+  // })
+
+
   //filter out keys that don't have saved encounters
   //an array of keys that all have saved enctouerns
   //reduce the ^ array of keys

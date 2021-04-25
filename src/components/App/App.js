@@ -34,7 +34,6 @@ class App extends Component {
       case 'saved':
         newEncounterState[floor][list].push(newEncounter);
         break;
-
     }
     this.setState({ encounterLists: newEncounterState })
   }
