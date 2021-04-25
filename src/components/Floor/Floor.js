@@ -7,7 +7,7 @@ import { getID, rollDice, d100, formatNum, addDice, addTags, formatSideBar } fro
 const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}) => {
 
   const [sideBarList, setSideBar] = useState([]);
-  const [encounterUpdate, setEncounter] =useState({});
+  const [encounterUpdate, setEncounter] = useState(encounterData['01']);
 
   // console.log('list', encounterList)
   // console.log('data', encounterData)
@@ -53,15 +53,14 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
     )
   })
 
-
   useEffect(() => {
-    createSideBar();
     rollEncounter();
+    createSideBar();
   },[])
 
   useEffect(() => {
-    // rollEncounter();
-    // createSideBar();
+    rollEncounter();
+    createSideBar();
   },[location.pathname])
 
   return (
