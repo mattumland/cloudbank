@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { addDice } from '../../utilities';
 import './Encounter.scss';
 
-//add new prop for rolledData,
-
 const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
   let count = '';
   let description = '';
@@ -70,12 +68,6 @@ const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
     }
   }
 
-  const setUpTags = () => {
-    //switch statement that looks at tags
-    //the outcome of this sets the value of "bonus"
-    //this is a new set of data that conditionally renders
-  }
-
   createSituation();
   createDescription();
 
@@ -95,6 +87,9 @@ const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
   return (
     <aside className='encounter-container'>
       <h2 className='description'>{`${description} ${reference}`}</h2>
+      {eData.name && (
+      <h2 className='name-tag'>{eData.name}</h2>)
+      }
       {eData.tags!=='short' && (
       <div className='situation-container'>
         <h3>{`Location - ${distance}`}</h3>

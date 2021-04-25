@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './Floor.scss';
 import Encounter from '../Encounter/Encounter';
-import { getID, formatIndex, rollDice, d100, formatRoll, addDice, formatSideBar } from '../../utilities';
+import { getID, rollDice, d100, formatNum, addDice, addTags, formatSideBar } from '../../utilities';
 
 const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}) => {
 
@@ -27,8 +27,9 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
 
   const rollEncounter = () => {
     const roll = rollDice('1d10')
-    const newEncounter = encounterData[formatRoll(roll)];
+    const newEncounter = encounterData[formatNum(roll,10)];
     addDice(newEncounter);
+    addTags(newEncounter);
     newEncounter.id = getID();
     addEncounter(newEncounter, floorID, 'random');
   }
