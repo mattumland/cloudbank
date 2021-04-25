@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 import Header from '../Header/Header';
 import Floor from '../Floor/Floor';
+import Saved from '../Saved/Saved';
 import { floors } from '../../data/gdData';
 import { fetchName } from '../../data/apiCaller';
 import { cleanNameData, getID } from '../../utilities';
@@ -20,18 +21,22 @@ class App extends Component {
     }
   }
 
-  addEncounter = (newEncounter, floor, list) => {
-    const newEncounterState = this.state.encounterLists;
-    if (list === 'random') {
-      newEncounterState[floor][list] = [newEncounter];
-    } else {
-      newEncounterState[floor][list] = newEncounter;
-    }
-    this.setState({ encounterLists: newEncounterState })
+  saveEncounter = (savedEncounter, floor, list) => {
+
   }
 
-  updateEncounter = (id, floor, list) => {
+  addEncounter = (newEncounter, floor, list) => {
     const newEncounterState = this.state.encounterLists;
+    switch (list) {
+      case 'random':
+        newEncounterState[floor][list] = [newEncounter];
+        break;
+      case 'saved':
+        newEncounterState[floor][list].push(newEncounter);
+        break;
+
+    }
+    this.setState({ encounterLists: newEncounterState })
   }
 
   componentDidMount() {
@@ -45,18 +50,26 @@ class App extends Component {
     return (
       <main className='App'>
         <Header />
-        <Route
-          exact path="/:floor"
-          render={({ match })=> {
-            return <Floor
-            floorID={match.params.floor}
-            floorName={this.state.floorData[match.params.floor].name}
-            encounterData={this.state.floorData[match.params.floor].encounters}
-            encounterList={this.state.encounterLists[match.params.floor]}
-            addEncounter={this.addEncounter}
-            />}}
+        <Switch >
+          <Route
+            exact path="/saved"
+            render={() => {
+              <Saved
+              encounterLists={this.state.encounterLists}
+              />}}
           />
-
+          <Route
+            exact path="/:floor"
+            render={({ match })=> {
+              return <Floor
+              floorID={match.params.floor}
+              floorName={this.state.floorData[match.params.floor].name}
+              encounterData={this.state.floorData[match.params.floor].encounters}
+              encounterList={this.state.encounterLists[match.params.floor]}
+              addEncounter={this.addEncounter}
+              />}}
+            />
+        </Switch>
       </main>
     )
 

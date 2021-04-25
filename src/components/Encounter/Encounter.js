@@ -11,6 +11,9 @@ const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
   let distance = '';
   let status= '';
 
+
+  //add conditional rendering to show the floor when the list is 'saved' 
+
   console.log(eData);
 
   const createDescription = () => {
