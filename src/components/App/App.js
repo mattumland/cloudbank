@@ -35,10 +35,12 @@ class App extends Component {
   }
 
   deleteEncounter = (encounter, id, floor) => {
-    const encounterState = this.state.encounterLists
-    const newEncounterState = encounterState[floor].saved.filter(encounter => encounter.id !== id);
+    const newEncounterState = this.state.encounterLists
+    const savedList = newEncounterState[floor].saved;
+    // console.log(savedList);
+    const newSavedList = savedList.filter(encounter => encounter.id !== id);
+    newEncounterState[floor].saved = newSavedList
     this.setState({ encounterLists: newEncounterState });
-    console.log(this.state.encounterLists)
   }
 
   componentDidMount() {
