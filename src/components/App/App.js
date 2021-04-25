@@ -35,10 +35,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // fetchName()
+    // console.log(fetchName().character.name)
     // .then((nameData) => {
     //   console.log(nameData.character.name);
-    // });
+    // // });
   };
 
   render() {
