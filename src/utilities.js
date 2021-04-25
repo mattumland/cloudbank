@@ -45,14 +45,39 @@ export const addDice = (encounter) => {
 
 export const addTags = (encounter) => {
   switch(encounter.tags) {
+    // case 'short':
+    //   Promise.all([fetchName()])
+    //   .then((nameData) => {
+    //     encounter.name = `'${nameData[0].character.name}'`
+    //   })
+    //   .catch(err => encounter.name = `'Mummy'`)
+    //   break;
+    // case 'forgotten':
+    //   Promise.all([fetchName()])
+    //   .then((nameData) => {
+    //     encounter.name = `'${nameData[0].character.name}'`
+    //   })
+    //   .catch(err => encounter.name = `'Mummy'`)
+    //   break;
+    // case '':
+    //   Promise.all([fetchName()])
+    //   .then((nameData) => {
+    //     encounter.name = `'${nameData[0].character.name}'`
+    //   })
+    //   .catch(err => encounter.name = `'Mummy'`)
+    //   break;
     case 'name':
-      fetchName()
-      .then(nameData => encounter.name = `'${nameData.character.name}'`)
-      .catch(err => encounter.name = `Mummy`)
+      Promise.all([fetchName()])
+      .then((nameData) => {
+        encounter.name = `'${nameData[0].character.name}'`
+      })
+      .catch(err => encounter.name = `'Mummy'`)
       break;
     case 'tshooter':
-      fetchName()
-      .then(nameData => encounter.name = `'${nameData.character.name}' is in charge.`)
+      Promise.all([fetchName()])
+      .then((nameData) => {
+        encounter.name = `'${nameData[0].character.name}' is in charge.`
+      })
       .catch(err => encounter.name = `'Mummy' is in charge.`)
       break;
   }

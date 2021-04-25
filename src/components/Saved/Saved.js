@@ -1,7 +1,7 @@
 import React from 'react';
 import Encounter from '..//Encounter/Encounter';
 
-const Saved = ({ encounterLists, deleteEncounter }) => {
+const Saved = ({ encounterLists, deleteEncounter, addEncounter }) => {
 
   // console.log(encounterLists)
 
@@ -24,6 +24,7 @@ const Saved = ({ encounterLists, deleteEncounter }) => {
         eData={encounter}
         key={index+1000}
         deleteEncounter={deleteEncounter}
+        addEncounter={addEncounter}
         list={'saved'}
       />
     )
