@@ -8,8 +8,8 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
 
   const [sideBarList, setSideBar] = useState([])
 
-  console.log('list', encounterList)
-  console.log('data', encounterData)
+  // console.log('list', encounterList)
+  // console.log('data', encounterData)
 
   const createSideBar = () => {
     const encounterKeys = Object.keys(encounterData);

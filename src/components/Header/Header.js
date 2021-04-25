@@ -11,7 +11,14 @@ const Header = () => {
       <nav className='nav-bar'>
         <ol>
           <li><button data='roll' className='roll-btn'>ROLL</button></li>
-          <li><button data='saved' className='saved-btn'>SAVED</button></li>
+          <li>
+            <NavLink
+              to='/saved'
+              className='btn'
+              activeClassName='active-btn'>
+              SAVED
+            </NavLink>
+          </li>
           <li>
             <NavLink
               to='/theBell'
@@ -46,3 +53,5 @@ const Header = () => {
 }
 
 export default Header
+
+// <button data='saved' className='saved-btn'>SAVED</button>

@@ -13,7 +13,7 @@ const Encounter = ({ floor, eData, list, addEncounter }) => {
 
   //add conditional rendering to show the floor when the list is 'saved'
 
-  console.log(eData);
+  // console.log(eData);
 
   const createDescription = () => {
     description = '';
