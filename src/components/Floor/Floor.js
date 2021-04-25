@@ -8,6 +8,9 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
 
   const [sideBarList, setSideBar] = useState([])
 
+  console.log('list', encounterList)
+  console.log('data', encounterData)
+
   const createSideBar = () => {
     const encounterKeys = Object.keys(encounterData);
     const encounterList = encounterKeys.reduce((list, key, index) => {
@@ -41,7 +44,6 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
         eData={encounter}
         key={index+1000}
         addEncounter={addEncounter}
-        encounterList={encounterList}
         list={'random'}
       />
     )

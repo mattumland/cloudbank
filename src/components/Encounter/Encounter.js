@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 import { addDice } from '../../utilities';
 import './Encounter.scss';
 
-const Encounter = ({ floor, eData, list, addEncounter, encounterList }) => {
+const Encounter = ({ floor, eData, list, addEncounter }) => {
   let count = '';
   let description = '';
   let reference = '';
   let attititude = '';
   let distance = '';
   let status= '';
-
 
   //add conditional rendering to show the floor when the list is 'saved'
 

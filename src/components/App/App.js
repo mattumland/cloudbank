@@ -21,10 +21,6 @@ class App extends Component {
     }
   }
 
-  saveEncounter = (savedEncounter, floor, list) => {
-
-  }
-
   addEncounter = (newEncounter, floor, list) => {
     const newEncounterState = this.state.encounterLists;
     switch (list) {
@@ -36,6 +32,10 @@ class App extends Component {
         break;
     }
     this.setState({ encounterLists: newEncounterState })
+  }
+
+  deleteEncounter = () => {
+
   }
 
   componentDidMount() {
@@ -53,19 +53,20 @@ class App extends Component {
           <Route
             exact path="/saved"
             render={() => {
-              <Saved
-              encounterLists={this.state.encounterLists}
+              return <Saved
+                encounterLists={this.state.encounterLists}
+                deleteEncounter={this.deleteEncounter}
               />}}
           />
           <Route
             exact path="/:floor"
             render={({ match })=> {
               return <Floor
-              floorID={match.params.floor}
-              floorName={this.state.floorData[match.params.floor].name}
-              encounterData={this.state.floorData[match.params.floor].encounters}
-              encounterList={this.state.encounterLists[match.params.floor]}
-              addEncounter={this.addEncounter}
+                floorID={match.params.floor}
+                floorName={this.state.floorData[match.params.floor].name}
+                encounterData={this.state.floorData[match.params.floor].encounters}
+                encounterList={this.state.encounterLists[match.params.floor]}
+                addEncounter={this.addEncounter}
               />}}
             />
         </Switch>

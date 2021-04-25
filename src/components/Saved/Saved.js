@@ -1,41 +1,41 @@
 import React from 'react';
+import Encounter from '..//Encounter/Encounter';
 
-const Saved = ({ encounterList }) => {
+const Saved = ({ encounterLists, deleteEncounter }) => {
 
+  console.log(encounterLists)
 
-  const encounterKeys = Object.keys(encounterList).filter(key => {
-    return encounterList[key].saved.length
+  const encounterKeys = Object.keys(encounterLists).filter(key => {
+    return encounterLists[key].saved.length
   });
 
+  const encounterData = encounterKeys.reduce((list, key) => {
+    const paritalList = encounterLists[key].saved;
+    list = list.concat(paritalList);
+    return list;
+  }, [])
 
-  // const savedEncounters = encounterList.random.map((encounter, index) => {
-  //   return (
-  //     <Encounter
-  //       floor={floorID}
-  //       eData={encounter}
-  //       key={index+1000}
-  //       addEncounter={addEncounter}
-  //       encounterList={encounterList}
-  //       list={'saved'}
-  //     />
-  //   )
-  // })
+  console.log(encounterData);
 
-
-  //filter out keys that don't have saved encounters
-  //an array of keys that all have saved enctouerns
-  //reduce the ^ array of keys
-    //produce single array of all saved encounter data, ensure that this also includes the flood
-  //iterate over this array to create encounters components
-  //render those components
-
+  const savedEncounters = encounterData.map((encounter, index) => {
+    return (
+      <Encounter
+        floor={encounter.floor}
+        eData={encounter}
+        key={index+1000}
+        deleteEncounter={deleteEncounter}
+        list={'saved'}
+      />
+    )
+  })
 
   //user effect to rerender if list changes
   //pass delete func as prop
 
   return(
-    <>
-    </>
+    <section>
+      {savedEncounters}
+    </section>
   )
 }
 
