@@ -2,47 +2,36 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './Floor.scss';
 import Encounter from '../Encounter/Encounter';
-import { getID, formatIndex, rollDice, d100, formatRoll, addDice } from '../../utilities';
+import { getID, formatIndex, rollDice, d100, formatRoll, addDice, formatSideBar } from '../../utilities';
 
 const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}) => {
 
-  const [premadeEncounterList, setPreEnc] = useState([])
+  const [sideBarList, setSideBar] = useState([])
 
-  const createPremadeList = () => {
+  const createSideBar = () => {
     const encounterKeys = Object.keys(encounterData);
-    const encounterList = encounterKeys.reduce((list,key, index) => {
+    const encounterList = encounterKeys.reduce((list, key, index) => {
       const nonRepeatList = [0,1,4,7,9];
       if (nonRepeatList.includes(index)) {
-        const newEncounter = encounterData[key];
-        addDice(newEncounter);
-        newEncounter.id = getID() + d100().value;
-        list.push(encounterData[key]);
+        const newEncounter = {
+            count: encounterData[key].count,
+            description: encounterData[key].description
+          }
+
+        list.push(newEncounter);
       }
       return list
     }, [])
-    addEncounter(encounterList, floorID, 'premade');
+    setSideBar(formatSideBar(encounterList))
   }
 
   const rollEncounter = () => {
-    const roll = rollDice('1.10')
+    const roll = rollDice('1d10')
     const newEncounter = encounterData[formatRoll(roll)];
     addDice(newEncounter);
-    newEncounter.id = getID() + d100().value;
+    newEncounter.id = getID();
     addEncounter(newEncounter, floorID, 'random');
   }
-
-  const preMadeEncounters = encounterList.premade.map((encounter, index) => {
-    return (
-      <Encounter
-        floor={floorID}
-        eData={encounter}
-        key={index}
-        addEncounter={addEncounter}
-        encounterList={encounterList}
-        list={'preMade'}
-      />
-    )
-  })
 
   const randomEncounters = encounterList.random.map((encounter, index) => {
     return (
@@ -57,35 +46,38 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
     )
   })
 
-
-  //useEffect to prevent weird rerender problem
-  //add another create list function to call on useEffect to ensure both list are stable
-  //roll dice in floor then pass those down to encounters for initial
-
   useEffect(() => {
-    createPremadeList();
+    rollEncounter();
+    createSideBar();
   },[])
 
 
   useEffect(() => {
-    createPremadeList();
+    rollEncounter();
   },[location.pathname])
 
   return (
     <section className='floor-container'>
       <h2 className='floor-title'>{floorName}</h2>
       <nav className='floor-controls'>
-        <button>RANDOM ENCOUNTERS</button>
-        <button>ENCOUNTER LIST</button>
       </nav>
       <section className='encounter-grid'>
-        <div className='premade'>
-          {preMadeEncounters}
-        </div>
-        <div className='random'>
+        <button onClick={rollEncounter}className='new-random'>GENERATE ENCOUNTER</button>
+        <section className='encounter'>
           {randomEncounters}
-          <button onClick={rollEncounter}className='new-random'>+</button>
-        </div>
+        </section>
+
+        <aside className='encounter-sidebar'>
+        <h3 className='encounter-list-title'>ENCOUNTER LIST</h3>
+        <ol className='encounter-list'>
+          <li>{sideBarList[0]}</li>
+          <li>{sideBarList[1]}</li>
+          <li>{sideBarList[2]}</li>
+          <li>{sideBarList[3]}</li>
+          <li>{sideBarList[4]}</li>
+        </ol>
+        <div className='responsive-block'></div>
+        </aside>
       </section>
     </section>
   )
@@ -99,3 +91,5 @@ Floor.propTypes = {
   encounterData: PropTypes.object,
   addEncounter: PropTypes.func
 };
+    // {preMadeEncounters}
+// <button onClick={rollEncounter}className='new-random'>roll new encounter</button>

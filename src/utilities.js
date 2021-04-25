@@ -2,6 +2,14 @@ export const shuffleItems = (array) => {
   return array.sort(() => 0.5 - Math.random());
 }
 
+export const formatSideBar = (encArray) => {
+  return encArray.map(encounter => {
+    return encounter.count ?
+      `${encounter.count} ${encounter.description}`:
+      `${encounter.description}`
+  })
+}
+
 export const getID = () => {
   const rawID = Date.now().toString().split('');
   return parseInt(shuffleItems(rawID).join(''));
@@ -19,7 +27,7 @@ export const formatRoll = (num) => {
 }
 
 export const rollDice = (diceCount) => {
-  const diceData = diceCount.split('.');
+  const diceData = diceCount.split('d');
   let value = 0
   for (let i = 0; i < diceData[0]; i++) {
     value =+ value + (1 + Math.floor(Math.random()*diceData[1]))
@@ -35,7 +43,7 @@ export const d100 = () => {
 }
 
 export const addDice = (encounter) => {
-  encounter.d10s = [rollDice('1.10'),rollDice('1.10'),rollDice('1.10'),rollDice('1.10'),rollDice('1.10')]
+  encounter.d10s = [rollDice('1d10'),rollDice('1d10'),rollDice('1d10'),rollDice('1d10'),rollDice('1d10')]
   encounter.d100s = [d100(), d100()]
 }
 

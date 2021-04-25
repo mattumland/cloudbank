@@ -70,19 +70,19 @@ export const floors = {
       '01': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.5',
+        'count': '1d5',
         'tags': 'forgotten'
       },
       '02': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.5',
+        'count': '1d5',
         'tags': 'forgotten'
       },
       '03': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.5',
+        'count': '1d5',
         'tags': 'forgotten'
       },
       '04': {
@@ -124,7 +124,7 @@ export const floors = {
       '10': {
         'description': 'Troubleshooter' ,
         'reference': 'pg. 14',
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'name'
     }
   },
@@ -134,37 +134,37 @@ export const floors = {
       '01': {
         'description': 'Chosen Android',
         'reference': 'pg. 24',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '02': {
         'description': 'Chosen Android',
         'reference': 'pg. 24',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '03': {
         'description': 'Chosen Android',
         'reference': 'pg. 24',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '04': {
         'description': 'Fallen Android',
         'reference': 'pg. 24',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '05': {
         'description': 'Fallen Android',
         'reference': 'pg. 24',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '06': {
         'description': 'Fallen Android',
         'reference': 'pg. 24',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '07': {
@@ -199,37 +199,37 @@ export const floors = {
       '01': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'forgotten'
       },
       '02': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'forgotten'
       },
       '03': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'forgotten'
       },
       '04': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '05': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '06': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '07': {
@@ -264,49 +264,49 @@ export const floors = {
       '01': {
         'description': 'Bee Drone' ,
         'reference': 'pg. 38',
-        'count': '2.10',
+        'count': '2d10',
         'tags': ''
       },
       '02': {
         'description': 'Bee Drone' ,
         'reference': 'pg. 38',
-        'count': '2.10',
+        'count': '2d10',
         'tags': ''
       },
       '03': {
         'description': 'Bee Drone' ,
         'reference': 'pg. 38',
-        'count': '2.10',
+        'count': '2d10',
         'tags': ''
       },
       '04': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'forgotten'
       },
       '05': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'forgotten'
       },
       '06': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'forgotten'
       },
       '07': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '08': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '09': {
@@ -347,31 +347,31 @@ export const floors = {
       '04': {
         'description': 'Pseudomilk Eel' ,
         'reference': 'pg. 42',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '05': {
         'description': 'Pseudomilk Eel' ,
         'reference': 'pg. 42',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '06': {
         'description': 'Pseudomilk Eel' ,
         'reference': 'pg. 42',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '07': {
         'description': 'Stunted Android',
         'reference':'pg. 41',
-        'count': '1.5',
+        'count': '1d5',
         'tags':''
       },
       '08': {
         'description': 'Stunted Android',
         'reference':'pg. 41',
-        'count': '1.5',
+        'count': '1d5',
         'tags':''
       },
       '09': {
@@ -394,19 +394,19 @@ export const floors = {
       '01': {
         'description': 'Escaped Child Android(s) from HEL seeking the Mind Thief' ,
         'reference': 'pg. 45',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '02': {
         'description': 'Escaped Child Android(s) from HEL seeking the Mind Thief' ,
         'reference': 'pg. 45',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '03': {
         'description': 'Escaped Child Android(s) from HEL seeking the Mind Thief' ,
         'reference': 'pg. 45',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '04': {
@@ -430,13 +430,13 @@ export const floors = {
       '07': {
         'description': 'Android Dog',
         'reference': 'pg. 44',
-        'count':' 1.5' ,
+        'count':' 1d5' ,
         'tags':''
       },
       '08': {
         'description': 'Android Dog',
         'reference': 'pg. 44',
-        'count':' 1.5' ,
+        'count':' 1d5' ,
         'tags':''
       },
       '09': {
@@ -459,49 +459,49 @@ export const floors = {
       '01': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'forgotten'
       },
       '02': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'forgotten'
       },
       '03': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'forgotten'
       },
       '04': {
         'description': 'Failed Android(s) looking to escape Disassembly ',
         'reference': 'pg. 49',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '05': {
         'description': 'Failed Android(s) looking to escape Disassembly ',
         'reference': 'pg. 49',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '06': {
         'description': 'Failed Android(s) looking to escape Disassembly ',
         'reference': 'pg. 49',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '07': {
         'description': 'Security Android chasing escapees',
         'reference':'pg. 10',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '08': {
         'description': 'Security Android chasing escapees',
         'reference':'pg. 10',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '09': {
@@ -524,49 +524,49 @@ export const floors = {
       '01': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'forgotten'
       },
       '02': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'forgotten'
       },
       '03': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'forgotten'
       },
       '04': {
         'description': 'Failed Android(s) looking to escape Disassembly ',
         'reference': 'pg. 49',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '05': {
         'description': 'Failed Android(s) looking to escape Disassembly ',
         'reference': 'pg. 49',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '06': {
         'description': 'Failed Android(s) looking to escape Disassembly ',
         'reference': 'pg. 49',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '07': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '08': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '09': {
@@ -589,37 +589,37 @@ export const floors = {
       '01': {
         'description': 'Diver',
         'reference': '',
-        'count': '1.5',
+        'count': '1d5',
         'tags': 'name'
       },
       '02': {
         'description': 'Diver',
         'reference': '',
-        'count': '1.5',
+        'count': '1d5',
         'tags': 'name'
       },
       '03': {
         'description': 'Diver',
         'reference': '',
-        'count': '1.5',
+        'count': '1d5',
         'tags': 'name'
       },
       '04': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '05': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '06': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       },
       '07': {
@@ -643,7 +643,7 @@ export const floors = {
       '10': {
         'description': 'Exact duplicates of the crew (+1d10 Bend & Bend Check)',
         'reference': 'pg. 10',
-        'count': '1.10',
+        'count': '1d10',
         'tags': ''
       }
     }
@@ -654,49 +654,49 @@ export const floors = {
       '01': {
         'description': 'Escaped Child Android' ,
         'reference': 'pg. 54',
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'child'
       },
       '02': {
         'description': 'Escaped Child Android' ,
         'reference': 'pg. 54',
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'child'
       },
       '03': {
         'description': 'Escaped Child Android' ,
         'reference': 'pg. 54',
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'child'
       },
       '04': {
         'description': 'Former CLOUDBANK Research Scientist',
         'reference': '',
-        'count': '1.5',
+        'count': '1d5',
         'tags': 'name'
       },
       '05': {
         'description': 'Former CLOUDBANK Research Scientist',
         'reference': '',
-        'count': '1.5',
+        'count': '1d5',
         'tags': 'name'
       },
       '06': {
         'description': 'Former CLOUDBANK Research Scientist',
         'reference': '',
-        'count': '1.5',
+        'count': '1d5',
         'tags': 'name'
       },
       '07': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '08': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '09': {
@@ -720,43 +720,43 @@ export const floors = {
       '01': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.5',
+        'count': '1d5',
         'tags': 'forgotten'
       },
       '02': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.5',
+        'count': '1d5',
         'tags': 'forgotten'
       },
       '03': {
         'description': 'Forgotten Android',
         'reference': 'pg. 11' ,
-        'count': '1.5',
+        'count': '1d5',
         'tags': 'forgotten'
       },
       '04': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '05': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '06': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '07': {
         'description': 'Security Android',
         'reference':'pg. 10',
-        'count': '1.5',
+        'count': '1d5',
         'tags': ''
       },
       '08': {
@@ -774,7 +774,7 @@ export const floors = {
       '10': {
         'description': 'Troubleshooter' ,
         'reference': 'pg. 14',
-        'count': '1.10',
+        'count': '1d10',
         'tags': 'name'
       }
     }

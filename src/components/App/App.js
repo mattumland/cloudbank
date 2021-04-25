@@ -12,11 +12,10 @@ class App extends Component {
     super();
     this.state = {
       floorData: floors,
-      savedEncounters: [],
       error:'',
       encounterLists: {
-        'theBell': {premade: [], random:[]}, //maybe saved encounters go here too
-        'floor1': {premade: [], random:[]}
+        'theBell': {saved: [], random:[]},
+        'floor1': {saved: [], random:[]}
       }
     }
   }
@@ -24,7 +23,7 @@ class App extends Component {
   addEncounter = (newEncounter, floor, list) => {
     const newEncounterState = this.state.encounterLists;
     if (list === 'random') {
-      newEncounterState[floor][list].push(newEncounter);
+      newEncounterState[floor][list] = [newEncounter];
     } else {
       newEncounterState[floor][list] = newEncounter;
     }
