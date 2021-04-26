@@ -92,13 +92,12 @@ class App extends Component {
             />
 
           <Route
-            exact path="/"
             render={() => {
               return <Message
                 error={this.state.error}
               />}}
           />
-          
+
         </Switch>
       </main>
     )
