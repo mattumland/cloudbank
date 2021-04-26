@@ -16,7 +16,17 @@ class App extends Component {
       error:'',
       encounterLists: {
         'theBell': {saved: [], random:[]},
-        'floor1': {saved: [], random:[]}
+        'floor1': {saved: [], random:[]},
+        'floor2': {saved: [], random:[]},
+        'floor3.1': {saved: [], random:[]},
+        'floor3.2': {saved: [], random:[]},
+        'floor3.3': {saved: [], random:[]},
+        'floor3.4': {saved: [], random:[]},
+        'floor3.5': {saved: [], random:[]},
+        'floor3.6': {saved: [], random:[]},
+        'floor3.7': {saved: [], random:[]},
+        'floor4': {saved: [], random:[]},
+        'floor6': {saved: [], random:[]}
       }
     }
   }
@@ -45,6 +55,7 @@ class App extends Component {
   componentDidMount() {
   };
 
+
   render() {
     return (
       <main className='App'>
@@ -59,13 +70,13 @@ class App extends Component {
               />}}
           />
           <Route
-            exact path="/:floor"
+            exact path="/:page"
             render={({ match })=> {
               return <Floor
-                floorID={match.params.floor}
-                floorName={this.state.floorData[match.params.floor].name}
-                encounterData={this.state.floorData[match.params.floor].encounters}
-                encounterList={this.state.encounterLists[match.params.floor]}
+                floorID={match.params.page}
+                floorName={this.state.floorData[match.params.page].name}
+                encounterData={this.state.floorData[match.params.page].encounters}
+                encounterList={this.state.encounterLists[match.params.page]}
                 addEncounter={this.addEncounter}
               />}}
             />

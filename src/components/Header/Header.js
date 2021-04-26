@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import "./Header.scss";
 
 const Header = () => {
-  //prop: rollFunction
   return (
     <header>
       <h1 className='desktop-title'>WELCOME TO CLOUDBANK</h1>
@@ -28,6 +27,7 @@ const Header = () => {
               THE BELL
             </NavLink>
           </li>
+
           <li>
             <NavLink
               to='/floor1'
@@ -37,6 +37,7 @@ const Header = () => {
               FLOOR 1
             </NavLink>
           </li>
+
           <li>
             <NavLink
               to='/floor2'
@@ -45,6 +46,7 @@ const Header = () => {
               FLOOR 2
             </NavLink>
           </li>
+
           <li>
             <NavLink
               to='/floor3.1'
@@ -55,7 +57,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to='/floor32'
+              to='/floor3.2'
               className='btn'
               activeClassName='active-btn'>
               FLOOR 3.2
@@ -63,7 +65,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to='/floor33'
+              to='/floor3.3'
               className='btn'
               activeClassName='active-btn'>
               FLOOR 3.3
@@ -71,7 +73,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to='/floor34'
+              to='/floor3.4'
               className='btn'
               activeClassName='active-btn'>
               FLOOR 3.4
@@ -79,7 +81,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to='/floor35'
+              to='/floor3.5'
               className='btn'
               activeClassName='active-btn'>
               FLOOR 3.5
@@ -87,7 +89,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to='/floor36'
+              to='/floor3.6'
               className='btn'
               activeClassName='active-btn'>
               FLOOR 3.6
@@ -95,7 +97,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to='/floor37'
+              to='/floor3.7'
               className='btn'
               activeClassName='active-btn'>
               FLOOR 3.7
