@@ -1,4 +1,5 @@
 import { fetchName } from './data/apiCaller';
+import { nameIDs } from './data/gdData';
 
 export const shuffleItems = (array) => {
   return array.sort(() => 0.5 - Math.random());
@@ -44,37 +45,18 @@ export const addDice = (encounter) => {
 }
 
 export const addTags = (encounter) => {
+  const nameID = shuffleItems(nameIDs)[0];
   switch(encounter.tags) {
-    // case 'short':
-    //   Promise.all([fetchName()])
-    //   .then((nameData) => {
-    //     encounter.name = `'${nameData[0].character.name}'`
-    //   })
-    //   .catch(err => encounter.name = `'Mummy'`)
-    //   break;
-    // case 'forgotten':
-    //   Promise.all([fetchName()])
-    //   .then((nameData) => {
-    //     encounter.name = `'${nameData[0].character.name}'`
-    //   })
-    //   .catch(err => encounter.name = `'Mummy'`)
-    //   break;
-    // case '':
-    //   Promise.all([fetchName()])
-    //   .then((nameData) => {
-    //     encounter.name = `'${nameData[0].character.name}'`
-    //   })
-    //   .catch(err => encounter.name = `'Mummy'`)
-    //   break;
     case 'name':
-      Promise.all([fetchName()])
+
+      Promise.all([fetchName(nameID)])
       .then((nameData) => {
         encounter.name = `'${nameData[0].character.name}'`
       })
       .catch(err => encounter.name = `'Mummy'`)
       break;
     case 'tshooter':
-      Promise.all([fetchName()])
+      Promise.all([fetchName(nameID)])
       .then((nameData) => {
         encounter.name = `'${nameData[0].character.name}' is in charge.`
       })
@@ -82,3 +64,26 @@ export const addTags = (encounter) => {
       break;
   }
 }
+
+
+// case 'short':
+//   Promise.all([fetchName()])
+//   .then((nameData) => {
+  //     encounter.name = `'${nameData[0].character.name}'`
+  //   })
+  //   .catch(err => encounter.name = `'Mummy'`)
+  //   break;
+  // case 'forgotten':
+  //   Promise.all([fetchName()])
+  //   .then((nameData) => {
+    //     encounter.name = `'${nameData[0].character.name}'`
+    //   })
+    //   .catch(err => encounter.name = `'Mummy'`)
+    //   break;
+    // case '':
+    //   Promise.all([fetchName()])
+    //   .then((nameData) => {
+      //     encounter.name = `'${nameData[0].character.name}'`
+      //   })
+      //   .catch(err => encounter.name = `'Mummy'`)
+      //   break;

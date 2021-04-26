@@ -4,6 +4,7 @@ import './App.scss';
 import Header from '../Header/Header';
 import Floor from '../Floor/Floor';
 import Saved from '../Saved/Saved';
+import Test from '../Test/Test';
 import { floors } from '../../data/gdData';
 import { fetchName } from '../../data/apiCaller';
 import { cleanNameData, getID } from '../../utilities';
@@ -62,6 +63,14 @@ class App extends Component {
         <Header />
         <Switch >
           <Route
+            exact path="/test"
+            render={() => {
+              return <Test
+                encounter={this.state.floorData.theBell.encounters['08']}
+              />}}
+          />
+
+          <Route
             exact path="/saved"
             render={() => {
               return <Saved
@@ -69,6 +78,7 @@ class App extends Component {
                 deleteEncounter={this.deleteEncounter}
               />}}
           />
+
           <Route
             exact path="/:page"
             render={({ match })=> {
@@ -80,6 +90,10 @@ class App extends Component {
                 addEncounter={this.addEncounter}
               />}}
             />
+
+
+
+
         </Switch>
       </main>
     )
