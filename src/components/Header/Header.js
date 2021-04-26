@@ -1,12 +1,18 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import "./Header.scss";
 
 const Header = () => {
   return (
     <header>
-      <h1 className='desktop-title'>WELCOME TO CLOUDBANK</h1>
-      <h1 className='mobile-title'>CLOUDBANK</h1>
+      <Link
+        to='/'>
+        <h1 className='desktop-title'>WELCOME TO CLOUDBANK</h1>
+      </Link>
+      <Link
+        to='/'>
+        <h1 className='mobile-title'>CLOUDBANK</h1>
+      </Link>
       <nav className='nav-bar'>
         <ol>
           <NavLink
@@ -18,7 +24,6 @@ const Header = () => {
           </NavLink>
           <NavLink
             to='/saved'
-            data-cy='savedTab'
             className='mobile-btn'
             activeClassName='active-btn'>
             ✶
@@ -44,7 +49,6 @@ const Header = () => {
           </NavLink>
           <NavLink
             to='/floor1'
-            data-cy='floor1'
             className='mobile-btn'
             activeClassName='active-btn'>
             1

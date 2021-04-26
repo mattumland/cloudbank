@@ -30,11 +30,9 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
     const newEncounter = encounterData[formatNum(roll,10)];
     addDice(newEncounter);
     addTags(newEncounter);
-    console.log(newEncounter);
     newEncounter.id = getID();
     newEncounter.floor = floorID;
     setEncounter(newEncounter);
-    console.log(encounterUpdate);
     addEncounter(newEncounter, floorID, 'random');
   }
 
@@ -89,5 +87,5 @@ Floor.propTypes = {
   floorName: PropTypes.string,
   encounterData: PropTypes.object,
   addEncounter: PropTypes.func,
-  encounterList: PropTypes.string
+  encounterList: PropTypes.object
 };

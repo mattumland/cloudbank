@@ -28,8 +28,7 @@ const Saved = ({ encounterLists, deleteEncounter, addEncounter }) => {
     )
   })
 
-  const savedMessage = savedEncounters.length ? 'Saved encounters': "No encounters have been saved"
-console.log(savedMessage);
+  const savedMessage = savedEncounters.length ? 'Saved encounters': "No encounters have been saved";
 
   return(
     <>
