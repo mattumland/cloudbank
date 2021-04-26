@@ -43,7 +43,7 @@
     border: $gdGreenSolid solid 5px;
 
     li {
-      margin:10px;
+      margin:15px;
     }
   }
 
@@ -63,3 +63,44 @@
     border: solid $gdGreenSolid 5px;
     margin: 15px 0 -5px 0;
   }
+
+@media screen and (max-width: 750px) {
+  .encounter-grid {
+    width: 85%;
+  }
+
+  .encounter-list {
+    font-size: 16px;
+
+    li {
+      margin:15px;
+    }
+  }
+
+
+
+}
+
+@media screen and (max-width: 660px) {
+  .encounter-grid {
+    width: 95%;
+  }
+
+  .encounter-list {
+    font-size: 14px;
+
+    li {
+      margin:12px;
+    }
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .encounter-list-title {
+    font-size: 16px;
+  }
+
+  .new-random {
+    font-size: 18px;
+  }
+}
