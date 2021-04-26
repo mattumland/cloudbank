@@ -48,7 +48,6 @@ export const addTags = (encounter) => {
   const nameID = shuffleItems(nameIDs)[0];
   switch(encounter.tags) {
     case 'name':
-
       Promise.all([fetchName(nameID)])
       .then((nameData) => {
         encounter.name = `'${nameData[0].character.name}'`
@@ -64,26 +63,3 @@ export const addTags = (encounter) => {
       break;
   }
 }
-
-
-// case 'short':
-//   Promise.all([fetchName()])
-//   .then((nameData) => {
-  //     encounter.name = `'${nameData[0].character.name}'`
-  //   })
-  //   .catch(err => encounter.name = `'Mummy'`)
-  //   break;
-  // case 'forgotten':
-  //   Promise.all([fetchName()])
-  //   .then((nameData) => {
-    //     encounter.name = `'${nameData[0].character.name}'`
-    //   })
-    //   .catch(err => encounter.name = `'Mummy'`)
-    //   break;
-    // case '':
-    //   Promise.all([fetchName()])
-    //   .then((nameData) => {
-      //     encounter.name = `'${nameData[0].character.name}'`
-      //   })
-      //   .catch(err => encounter.name = `'Mummy'`)
-      //   break;

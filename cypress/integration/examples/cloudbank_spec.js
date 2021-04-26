@@ -11,13 +11,12 @@ describe('Cloudbank Home Page', () => {
       .get('.nav-bar').should('be.visible')
       .get('.btn')
       .should(($btn) => {
-        expect($btn).to.have.length(14)
-        expect($btn, 'first').to.contain('ROLL')
-        expect($btn, 'second').to.contain('SAVED')
-        expect($btn, 'third').to.contain('THE BELL')
-        expect($btn, 'fourth').to.contain('FLOOR 1')
-        expect($btn, 'fifth').to.contain('FLOOR 2')
-        expect($btn, 'fourteenth').to.contain('FLOOR 6')
+        expect($btn).to.have.length(13)
+        expect($btn, 'first').to.contain('SAVED')
+        expect($btn, 'second').to.contain('THE BELL')
+        expect($btn, 'third').to.contain('FLOOR 1')
+        expect($btn, 'fourth').to.contain('FLOOR 2')
+        expect($btn, 'thirteenth').to.contain('FLOOR 6')
       })
     });
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { addDice } from '../../utilities';
 import './Encounter.scss';
@@ -10,10 +10,6 @@ const Encounter = ({ floor, eData, list, addEncounter, deleteEncounter }) => {
   let attititude = '';
   let distance = '';
   let status= '';
-
-  //add conditional rendering to show the floor when the list is 'saved'
-
-  // console.log(eData);
 
   const createDescription = () => {
     description = '';
@@ -124,11 +120,6 @@ Encounter.propTypes = {
   floor: PropTypes.string,
   eData: PropTypes.object,
   list: PropTypes.string,
-  addEncounter: PropTypes.func
+  addEncounter: PropTypes.func,
+  deleteEncounter: PropTypes.func
 }
-
-
-
-// {list==='random' && (
-//   <button>DELETE</button>)
-// }

@@ -1,12 +1,18 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import "./Header.scss";
 
 const Header = () => {
   return (
     <header>
-      <h1 className='desktop-title'>WELCOME TO CLOUDBANK</h1>
-      <h1 className='mobile-title'>CLOUDBANK</h1>
+      <Link
+        to='/'>
+        <h1 className='desktop-title'>WELCOME TO CLOUDBANK</h1>
+      </Link>
+      <Link
+        to='/'>
+        <h1 className='mobile-title'>CLOUDBANK</h1>
+      </Link>
       <nav className='nav-bar'>
         <ol>
           <NavLink
@@ -18,7 +24,6 @@ const Header = () => {
           </NavLink>
           <NavLink
             to='/saved'
-            data-cy='savedTab'
             className='mobile-btn'
             activeClassName='active-btn'>
             ✶
@@ -44,7 +49,6 @@ const Header = () => {
           </NavLink>
           <NavLink
             to='/floor1'
-            data-cy='floor1'
             className='mobile-btn'
             activeClassName='active-btn'>
             1
@@ -176,18 +180,4 @@ const Header = () => {
 
 }
 
-export default Header
-
-// <button data='saved' className='saved-btn'>SAVED</button>
-
-
-// <li><button data='floor2'className='btn'>FLOOR 2</button></li>
-// <li><button data='floor3.1'className='btn'>FLOOR 3.1</button></li>
-// <li><button data='floor3.2' className='btn'>FLOOR 3.2</button></li>
-// <li><button data='floor3.3'className='btn'>FLOOR 3.3</button></li>
-// <li><button data='floor3.4'className='btn'>FLOOR 3.4</button></li>
-// <li><button data='floor3.5'className='btn'>FLOOR 3.5</button></li>
-// <li><button data='floor3.6'className='btn'>FLOOR 3.6</button></li>
-// <li><button data='floor3.7'className='btn'>FLOOR 3.7</button></li>
-// <li><button data='floor4'className='btn'>FLOOR 4</button></li>
-// <li><button data='floor6'className='btn'>FLOOR 6</button></li>
+export default Header;

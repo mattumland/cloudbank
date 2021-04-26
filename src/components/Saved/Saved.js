@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Encounter from '..//Encounter/Encounter';
 import './Saved.scss'
 
@@ -27,8 +28,7 @@ const Saved = ({ encounterLists, deleteEncounter, addEncounter }) => {
     )
   })
 
-  const savedMessage = savedEncounters.length ? 'Saved encounters': "No encounters have been saved"
-console.log(savedMessage);
+  const savedMessage = savedEncounters.length ? 'Saved encounters': "No encounters have been saved";
 
   return(
     <>
@@ -42,8 +42,8 @@ console.log(savedMessage);
 
 export default Saved;
 
-
-/*
-
-
-*/
+Saved.propTypes = {
+  addEncounter: PropTypes.func,
+  encounterList: PropTypes.string,
+  deleteEncounter: PropTypes.func
+};

@@ -674,19 +674,19 @@ export const floors = {
         'description': 'Former CLOUDBANK Research Scientist(s)',
         'reference': '',
         'count': '1d5',
-        'tags': 'name'
+        'tags': 'tshooter'
       },
       '05': {
         'description': 'Former CLOUDBANK Research Scientist(s)',
         'reference': '',
         'count': '1d5',
-        'tags': 'name'
+        'tags': 'tshooter'
       },
       '06': {
         'description': 'Former CLOUDBANK Research Scientist(s)',
         'reference': '',
         'count': '1d5',
-        'tags': 'name'
+        'tags': 'tshooter'
       },
       '07': {
         'description': 'Security Android(s)',

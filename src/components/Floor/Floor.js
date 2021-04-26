@@ -7,10 +7,6 @@ import { getID, rollDice, d100, formatNum, addDice, addTags, formatSideBar } fro
 const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}) => {
 
   const [sideBarList, setSideBar] = useState([]);
-  const [encounterUpdate, setEncounter] = useState(encounterData['01']);
-
-  // console.log('list', encounterList)
-  // console.log('data', encounterData)
 
   const createSideBar = () => {
     const encounterKeys = Object.keys(encounterData);
@@ -33,11 +29,8 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
     const newEncounter = encounterData[formatNum(roll,10)];
     addDice(newEncounter);
     addTags(newEncounter);
-    console.log(newEncounter);
     newEncounter.id = getID();
     newEncounter.floor = floorID;
-    setEncounter(newEncounter);
-    console.log(encounterUpdate);
     addEncounter(newEncounter, floorID, 'random');
   }
 
@@ -91,5 +84,6 @@ Floor.propTypes = {
   floorID: PropTypes.string,
   floorName: PropTypes.string,
   encounterData: PropTypes.object,
-  addEncounter: PropTypes.func
+  addEncounter: PropTypes.func,
+  encounterList: PropTypes.object
 };

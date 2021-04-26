@@ -7,8 +7,6 @@ import Saved from '../Saved/Saved';
 import Test from '../Test/Test';
 import Message from '../Message/Message';
 import { floors } from '../../data/gdData';
-import { fetchName } from '../../data/apiCaller';
-import { cleanNameData, getID } from '../../utilities';
 
 class App extends Component {
   constructor() {
@@ -40,7 +38,9 @@ class App extends Component {
         newEncounterState[floor][list] = [newEncounter];
         break;
       case 'saved':
-        newEncounterState[floor][list].push(newEncounter);
+        if (!newEncounterState[floor][list].includes(newEncounter)) {
+          newEncounterState[floor][list].push(newEncounter);
+        }
         break;
     }
     this.setState({ encounterLists: newEncounterState })
@@ -101,19 +101,7 @@ class App extends Component {
         </Switch>
       </main>
     )
-
   }
-
 }
 
 export default App;
-
-
-
-
-
-// <Route
-// exact path="/:artPieceID"
-// render={({ match }) => {
-//   return <Floor id={match.params.artPieceID} />}}
-//   />
