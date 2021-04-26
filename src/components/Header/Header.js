@@ -9,7 +9,6 @@ const Header = () => {
       <h1 className='mobile-title'>CLOUDBANK</h1>
       <nav className='nav-bar'>
         <ol>
-          <li><button data='roll' className='btn'>ROLL</button></li>
           <NavLink
             to='/saved'
             data-cy='savedTab'
