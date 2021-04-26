@@ -7,7 +7,6 @@ import { getID, rollDice, d100, formatNum, addDice, addTags, formatSideBar } fro
 const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}) => {
 
   const [sideBarList, setSideBar] = useState([]);
-  const [encounterUpdate, setEncounter] = useState(encounterData['01']);
 
   const createSideBar = () => {
     const encounterKeys = Object.keys(encounterData);
@@ -32,7 +31,6 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
     addTags(newEncounter);
     newEncounter.id = getID();
     newEncounter.floor = floorID;
-    setEncounter(newEncounter);
     addEncounter(newEncounter, floorID, 'random');
   }
 
