@@ -260,7 +260,7 @@ export const floors = {
     }
   },
   'floor3.2': {
-    'name': 'Skeleton Work',
+    'name': 'Skeleton Works',
     'encounters': {
       '01': {
         'description': 'Bee Drone' ,
@@ -786,3 +786,53 @@ export const floors = {
 export const nameIDs = [
   "CHMA0000021696",  "CHMA0000028502",  "CHMA0000134966", "CHMA0000101321", "CHMA0000053158", "CHMA0000008975",  "CHMA0000232471",  "CHMA0000087568",  "CHMA0000190805",  "CHMA0000069617",  "CHMA0000014485",  "CHMA0000047431",  "CHMA0000002879",  "CHMA0000028249",  "CHMA0000186133",  "CHMA0000024478",  "CHMA0000194356", "CHMA0000014002",  "CHMA0000025685",  "CHMA0000044996",  "CHMA0000163455",  "CHMA0000019522", "CHMA0000065492",  "CHMA0000069882",  "CHMA0000000202",  "CHMA0000016227",  "CHMA0000013115",  "CHMA0000014126",  "CHMA0000024346",  "CHMA0000246166",  "CHMA0000004601",  "CHMA0000171062",  "CHMA0000246284",  "CHMA0000019457",  "CHMA0000206808",  "CHMA0000018552",  "CHMA0000079343",  "CHMA0000097044",  "CHMA0000139680",  "CHMA0000036939",  "CHMA0000069320",  "CHMA0000025672", "CHMA0000021572",  "CHMA0000039883",  "CHMA0000010293",  "CHMA0000226538",  "CHMA0000166940",  "CHMA0000190671",  "CHMA0000016405",  "CHMA0000054476",
 ]
+
+export const forgottenData = {
+  'defect':[
+    "Pseudoflesh rotted off completely. A walking metal skeleton.",
+    'Missing random limb(s).',
+    'Missing from the waist down.',
+    'Face absent entirely.',
+    'Balloon thin, massively swollen head from internal chemical reaction.',
+    'Face melted into a grotesque lump. Acid burns all over their pseudoflesh.',
+    '“Bot Rot." Highly infectious fungal condition that grows bizarrely on delicate circuity.',
+    'Two androids fused together side-by-side orback-to-back.',
+    'Speech Synthesis center missing. Communicates by parroting, creatively chopping and changing.',
+    'Limbs fused together and nearly useless. Crawls in the fetal position.'
+  ],
+  'adaptation': [
+    'Claw-like fingers/toes, climbs on walls and ceiling. Forearms sharpened into scythe blades (2d10 DMG).',
+    'Jury-rigged laser cutter replacing limb (½ DMG and android is stunned for 2 turns after firing).',
+    'Jury-rigged laser cutter replacing limb (½ DMG and android is stunned for 2 turns after firing).',
+    'Wears a cloak of overpowered strobing lamps.',
+    'Carries a tranq-gun fitted with data-syringes. Android targets make Sanity Save [+] or the virus crashes their consciousness, leaving them inert for 1 hour.',
+    'Carries jugs of acidic, industrial run-off sludge (3d10 DMG, Armor Save or armor destroyed).',
+    'Wearing a vaccsuit. Pretending to be a lost human, refusing to take off suit, insisting it has “a disease.”',
+    'Constructed a hunting animal from jury-rigged swarm of limbs. C:50 (no DMG, grapples) I:20 H:2(10)',
+    '2d10 passive android companions. Can broadcast a signal to send them into a killing frenzy. PC androids gain 2d10 stress OR give in to the signal for 3 rounds.',
+    'Lives entirely within the vents and crawlspaces, never venturing into the corridors.'
+  ],
+   'doing': [
+      'Hiding and observing from a distance.',
+      'Arguing amongst themselves. Loudly.',
+      'Cheerfully playing a game of Hide & Seek. Harvesting parts from a broken android.',
+      'Repairing a broken android with their own parts. This incapacitates or kills the donor.',
+      'Stuck in a broken loop, trying to do the job of a CLOUDBANK employee.',
+      'Connected to 1d10 androids via cable. Silently forming a Beowulf Cluster.',
+      'Running a small barter shop. They have some weapons and ammunition. They want Logic Cores. They have backup nearby.',
+      'Fleeing from a nearby Troubleshooter (pg.14) killteam. 1d5 rooms away.',
+      'Experimenting with a random Artifact (pg.62) they just found.'
+   ],
+   'topic': [
+      'Nothing. Runs away if approached.',
+      'Getting out of here.',
+      'The Minotaur (pg. 29). Is it true it can save humanity?',
+      'Mundane details of CLOUDBANK production.',
+      'One of them believes it is human despite physical evidence to the contrary. Begs to come with you.',
+      'Normal human chit-chat. Follows like a lost puppy and asks child-like questions like "Why is the sky blue?"',
+      'Terrified of Monarch (pg. 8). Afraid of being sent to the [35D] REJECT BIN. Willing to help.',
+      "Mundane details of CLOUDBANK production. Their memories are all out of date and they don't realize the factory has closed down.",
+      'What the world outside THE DEEP is like. Could they make it there? Would people treat them poorly?',
+      'Their present condition is the result of torture by another (Diver? Android?). They hold you responsible.'
+     ]
+}
