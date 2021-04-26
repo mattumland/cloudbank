@@ -2,6 +2,10 @@
   display: none;
 }
 
+@mixin reveal {
+  display: block;
+}
+
 @mixin headerStyle {
   width: 100%;
   text-align: center;
@@ -9,6 +13,57 @@
   color: white;
   font-size: 90px;
   margin-bottom: -26px;
+
+  @media screen and (max-width: 1110px) {
+      font-size: 80px;
+      margin-bottom: -24px;
+  }
+
+  @media screen and (max-width: 990px) {
+      font-size: 73px;
+      margin-bottom: -21px;
+  }
+
+}
+
+@mixin mobileHeader {
+  width: 100%;
+  text-align: center;
+  background: $gdGreen;
+  color: white;
+  font-size: 90px;
+  margin-bottom: -26px;
+
+  @media screen and (max-width: 540px) {
+      font-size: 78px;
+      margin-bottom: -21px;
+  }
+
+  @media screen and (max-width: 470px) {
+      font-size: 70px;
+      margin-bottom: -20px;
+  }
+
+  @media screen and (max-width: 410px) {
+      font-size: 66px;
+      margin-bottom: -19px;
+  }
+
+  @media screen and (max-width: 400px) {
+      font-size: 60px;
+      margin-bottom: -18px;
+  }
+
+  @media screen and (max-width: 350px) {
+      font-size: 55px;
+      margin-bottom: -16px;
+  }
+
+  @media screen and (max-width: 320px) {
+      font-size: 50px;
+      margin-bottom: -16px;
+  }
+
 }
 
 @mixin transition {

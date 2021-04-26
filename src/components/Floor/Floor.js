@@ -71,7 +71,6 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
           <section className='encounter'>
             {randomEncounter}
           </section>
-
           <h3 className='encounter-list-title'>ENCOUNTER LIST</h3>
           <ol className='encounter-list'>
             <li data-cy='sidebar' >{sideBarList[0]}</li>
@@ -81,7 +80,6 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
             <li data-cy='sidebar' >{sideBarList[4]}</li>
           </ol>
           <div className='responsive-block'></div>
-
         </section>
     </>
   )
