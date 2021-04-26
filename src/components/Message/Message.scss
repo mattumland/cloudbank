@@ -1,14 +1,49 @@
 @import '../../index.scss';
 
-  .error{
-    @include floorTitle
-  }
+.error{
+  @include floorTitle
+}
 
 .image-container {
-  width: 40%;
-  margin: 35px auto;
+  width: 30%;
+  margin: 45px auto;
 
   img {
     width:100%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .image-container {
+    width: 40%;
+    margin: 35px auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .image-container {
+    width: 45%;
+    margin: 30px auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .image-container {
+    width: 65%;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .image-container {
+    width: 75%;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .image-container {
+    width: 85%;
+    margin: 20px auto;
   }
 }
