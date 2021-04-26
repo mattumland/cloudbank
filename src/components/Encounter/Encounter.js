@@ -11,10 +11,6 @@ const Encounter = ({ floor, eData, list, addEncounter, deleteEncounter }) => {
   let distance = '';
   let status= '';
 
-  //add conditional rendering to show the floor when the list is 'saved'
-
-  // console.log(eData);
-
   const createDescription = () => {
     description = '';
     if (eData.count) {
@@ -124,11 +120,6 @@ Encounter.propTypes = {
   floor: PropTypes.string,
   eData: PropTypes.object,
   list: PropTypes.string,
-  addEncounter: PropTypes.func
+  addEncounter: PropTypes.func,
+  deleteEncounter: PropTypes.func
 }
-
-
-
-// {list==='random' && (
-//   <button>DELETE</button>)
-// }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Encounter from '..//Encounter/Encounter';
 import './Saved.scss'
 
@@ -42,8 +43,8 @@ console.log(savedMessage);
 
 export default Saved;
 
-
-/*
-
-
-*/
+Saved.propTypes = {
+  addEncounter: PropTypes.func,
+  encounterList: PropTypes.string,
+  deleteEncounter: PropTypes.func
+};

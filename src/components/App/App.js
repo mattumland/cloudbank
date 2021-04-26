@@ -101,19 +101,7 @@ class App extends Component {
         </Switch>
       </main>
     )
-
   }
-
 }
 
 export default App;
-
-
-
-
-
-// <Route
-// exact path="/:artPieceID"
-// render={({ match }) => {
-//   return <Floor id={match.params.artPieceID} />}}
-//   />

@@ -9,9 +9,6 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
   const [sideBarList, setSideBar] = useState([]);
   const [encounterUpdate, setEncounter] = useState(encounterData['01']);
 
-  // console.log('list', encounterList)
-  // console.log('data', encounterData)
-
   const createSideBar = () => {
     const encounterKeys = Object.keys(encounterData);
     const encounterList = encounterKeys.reduce((list, key, index) => {
@@ -91,5 +88,6 @@ Floor.propTypes = {
   floorID: PropTypes.string,
   floorName: PropTypes.string,
   encounterData: PropTypes.object,
-  addEncounter: PropTypes.func
+  addEncounter: PropTypes.func,
+  encounterList: PropTypes.string
 };

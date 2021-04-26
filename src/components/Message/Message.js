@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import cloudbank from '../../assets/cloudbank.png';
 import './Message.scss'
 
@@ -15,3 +16,7 @@ const Message = ({ error }) => {
 }
 
 export default Message
+
+Message.propTypes = {
+  error: PropTypes.string
+}

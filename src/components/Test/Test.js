@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { addTags } from '../../utilities';
 import { fetchName } from '../../data/apiCaller'
 import './Test.scss';
@@ -16,7 +17,7 @@ const Test = ({ encounter }) => {
   }
 
 
-  addTags(encounter); //produces a random name
+  addTags(encounter);
   testFetch('CHMA0000021696');
 
   return(
@@ -31,3 +32,7 @@ const Test = ({ encounter }) => {
 }
 
 export default Test;
+
+Test.propTypes = {
+  encounter: PropTypes.object
+}
