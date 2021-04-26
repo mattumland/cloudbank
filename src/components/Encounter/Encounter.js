@@ -34,7 +34,7 @@ const Encounter = ({ floor, eData, list, addEncounter, deleteEncounter }) => {
     if (count === 1) {
       description =`A ${eData.description}`
     } else if (count > 1) {
-      description =`${count} ${eData.description}s`;
+      description =`${count} ${eData.description}`;
     } else {
       description= eData.description;
     }

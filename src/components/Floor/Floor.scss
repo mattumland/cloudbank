@@ -23,23 +23,24 @@
   .encounter-list-title {
     grid-area: 1 / 2 / 2 / 3;
     width: 100%;
-    height: 20px;
-    font-size: 20px;
-    text-align: center;
+    max-height: 40px;
     background: $gdGreenSolid;
-    color:white;
-        margin: 15px 0 0px 0;
+    color: white;
+    font-size: 20px;
+    border: solid $gdGreenSolid 5px;
+    margin: 15px 0 -5px 0;
+    text-align: center;
   }
 
   .encounter-list {
     grid-area: 2 / 2 / 3 / 3;
     width: 100%;
     height: 100%;
-    font-size: 14px;
-    text-align: left;
+    font-size: 16px;
+    text-align: center;
     background: black;
     color:white;
-    border: $gdGreenSolid solid 6px;
+    border: $gdGreenSolid solid 5px;
 
     li {
       margin:10px;
@@ -58,7 +59,7 @@
     max-height: 40px;
     background: $gdGreen;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     border: solid $gdGreenSolid 5px;
     margin: 15px 0 -5px 0;
   }
