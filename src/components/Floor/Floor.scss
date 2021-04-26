@@ -7,31 +7,34 @@
 
   .encounter-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr .5fr;
+    grid-template-rows: .25fr 2fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     width: 70%;
     margin: 0 auto;
   }
 
-  .encounter-sidebar {
-    grid-area: 2 / 2 / 3 / 3;
-    // grid-area: 1 / 2 / 3 / 3;;
-  }
+  // .encounter-sidebar {
+  //   grid-area: 2 / 2 / 3 / 3;
+  //   // grid-area: 1 / 2 / 3 / 3;;
+  // }
 
   .encounter-list-title {
     grid-area: 1 / 2 / 2 / 3;
     width: 100%;
+    height: 20px;
     font-size: 20px;
     text-align: center;
     background: $gdGreenSolid;
     color:white;
+        margin: 15px 0 0px 0;
   }
 
   .encounter-list {
     grid-area: 2 / 2 / 3 / 3;
     width: 100%;
+    height: 100%;
     font-size: 14px;
     text-align: left;
     background: black;
@@ -45,6 +48,8 @@
 
   .encounter {
     grid-area: 2 / 1 / 3 / 2;
+    width: 100%;
+    height: 100%;
   }
 
   .new-random {
