@@ -63,14 +63,6 @@ class App extends Component {
         <Header />
         <Switch >
           <Route
-            exact path="/"
-            render={() => {
-              return <Message
-                error={this.state.error}
-              />}}
-          />
-
-          <Route
             exact path="/test"
             render={() => {
               return <Test
@@ -98,6 +90,15 @@ class App extends Component {
                 addEncounter={this.addEncounter}
               />}}
             />
+
+          <Route
+            exact path="/"
+            render={() => {
+              return <Message
+                error={this.state.error}
+              />}}
+          />
+          
         </Switch>
       </main>
     )

@@ -6,7 +6,7 @@ const Message = ({ error }) => {
 
   return (
     <>
-      {error && (<h2>{error}</h2>)}
+      {error && (<h2 className='error'>{error}</h2>)}
       <div className='image-container'>
         <img src={cloudbank} alt="An image of the CLOUDBANK synthetic production facility"/>
       </div>
