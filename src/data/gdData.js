@@ -803,8 +803,8 @@ export const forgottenData = {
   'adaptation': [
     'Claw-like fingers/toes, climbs on walls and ceiling. Forearms sharpened into scythe blades (2d10 DMG).',
     'Jury-rigged laser cutter replacing limb (½ DMG and android is stunned for 2 turns after firing).',
-    'Jury-rigged laser cutter replacing limb (½ DMG and android is stunned for 2 turns after firing).',
     'Wears a cloak of overpowered strobing lamps.',
+    'Enters “rest-mode” and appears dead. Often lies amongst “dead” android heaps.',
     'Carries a tranq-gun fitted with data-syringes. Android targets make Sanity Save [+] or the virus crashes their consciousness, leaving them inert for 1 hour.',
     'Carries jugs of acidic, industrial run-off sludge (3d10 DMG, Armor Save or armor destroyed).',
     'Wearing a vaccsuit. Pretending to be a lost human, refusing to take off suit, insisting it has “a disease.”',
@@ -815,7 +815,8 @@ export const forgottenData = {
    'doing': [
       'Hiding and observing from a distance.',
       'Arguing amongst themselves. Loudly.',
-      'Cheerfully playing a game of Hide & Seek. Harvesting parts from a broken android.',
+      'Cheerfully playing a game of Hide & Seek.',
+      'Harvesting parts from a broken android.',
       'Repairing a broken android with their own parts. This incapacitates or kills the donor.',
       'Stuck in a broken loop, trying to do the job of a CLOUDBANK employee.',
       'Connected to 1d10 androids via cable. Silently forming a Beowulf Cluster.',
