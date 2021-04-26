@@ -81,7 +81,7 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
             <li data-cy='sidebar' >{sideBarList[4]}</li>
           </ol>
           <div className='responsive-block'></div>
-  
+
         </section>
     </>
   )
@@ -95,5 +95,3 @@ Floor.propTypes = {
   encounterData: PropTypes.object,
   addEncounter: PropTypes.func
 };
-    // {preMadeEncounters}
-// <button onClick={rollEncounter}className='new-random'>roll new encounter</button>

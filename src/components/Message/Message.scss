@@ -1,0 +1,14 @@
+@import '../../index.scss';
+
+  .error{
+    @include floorTitle
+  }
+
+.image-container {
+  width: 40%;
+  margin: 35px auto;
+
+  img {
+    width:100%;
+  }
+}

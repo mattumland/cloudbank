@@ -86,13 +86,6 @@ const Encounter = ({ floor, eData, list, addEncounter, deleteEncounter }) => {
   createSituation();
   createDescription();
 
-  // useEffect(() => {
-  //   reroll();
-  // }, [])
-
-// console.log(eData);
-//   console.log(description, reference, distance, attititude, status)
-
   return (
     <aside className='encounter-container'>
         <div className='primary-text'>
