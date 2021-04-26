@@ -127,7 +127,8 @@ export const floors = {
         'count': '1d10',
         'tags': 'tshooter'
     }
-  },
+  }
+},
   'floor2': {
     'name': 'EDEN',
     'encounters': {
@@ -711,9 +712,8 @@ export const floors = {
         'count': 0 ,
         'tags': 'name'
       }
-      }
     }
-  },
+},
   'floor6': {
     'name': 'Engineering & Support',
     'encounters': {
