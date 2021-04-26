@@ -1,6 +1,5 @@
 @import '../../index.scss';
 
-
 .floor-title {
   @include floorTitle
 }
@@ -14,11 +13,6 @@
     width: 65%;
     margin: 0 auto;
   }
-
-  // .encounter-sidebar {
-  //   grid-area: 2 / 2 / 3 / 3;
-  //   // grid-area: 1 / 2 / 3 / 3;;
-  // }
 
   .encounter-list-title {
     grid-area: 1 / 2 / 2 / 3;

@@ -40,7 +40,9 @@ class App extends Component {
         newEncounterState[floor][list] = [newEncounter];
         break;
       case 'saved':
-        newEncounterState[floor][list].push(newEncounter);
+        if (!newEncounterState[floor][list].includes(newEncounter)) {
+          newEncounterState[floor][list].push(newEncounter);
+        }
         break;
     }
     this.setState({ encounterLists: newEncounterState })

@@ -176,18 +176,4 @@ const Header = () => {
 
 }
 
-export default Header
-
-// <button data='saved' className='saved-btn'>SAVED</button>
-
-
-// <li><button data='floor2'className='btn'>FLOOR 2</button></li>
-// <li><button data='floor3.1'className='btn'>FLOOR 3.1</button></li>
-// <li><button data='floor3.2' className='btn'>FLOOR 3.2</button></li>
-// <li><button data='floor3.3'className='btn'>FLOOR 3.3</button></li>
-// <li><button data='floor3.4'className='btn'>FLOOR 3.4</button></li>
-// <li><button data='floor3.5'className='btn'>FLOOR 3.5</button></li>
-// <li><button data='floor3.6'className='btn'>FLOOR 3.6</button></li>
-// <li><button data='floor3.7'className='btn'>FLOOR 3.7</button></li>
-// <li><button data='floor4'className='btn'>FLOOR 4</button></li>
-// <li><button data='floor6'className='btn'>FLOOR 6</button></li>
+export default Header;
