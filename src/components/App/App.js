@@ -7,8 +7,6 @@ import Saved from '../Saved/Saved';
 import Test from '../Test/Test';
 import Message from '../Message/Message';
 import { floors } from '../../data/gdData';
-import { fetchName } from '../../data/apiCaller';
-import { cleanNameData, getID } from '../../utilities';
 
 class App extends Component {
   constructor() {
