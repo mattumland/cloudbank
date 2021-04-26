@@ -29,9 +29,9 @@
   }
 
   h3 {
-    font-size: 14px;
+    font-size: 16px;
     text-align: left;
-    padding: 3px 0 3px 10px;
+    padding: 10px;
     color: white;
   }
 
@@ -54,5 +54,23 @@
   button {
     width: 40%;
     padding: 2px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+    .encounter-container {
+      h3 {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+}
+
+@media screen and (max-width: 660px) {
+  .encounter-container {
+    h3 {
+      font-size: 12px;
+      padding: 4px;
+    }
   }
 }
