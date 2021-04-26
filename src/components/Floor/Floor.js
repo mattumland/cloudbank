@@ -64,29 +64,31 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
   },[location.pathname])
 
   return (
-    <section className='floor-container'>
+    <>
       <h2 className='floor-title'>{floorName}</h2>
-      <nav className='floor-controls'>
-      </nav>
-      <section className='encounter-grid'>
-        <button onClick={rollEncounter}className='new-random'>GENERATE ENCOUNTER</button>
-        <section className='encounter'>
-          {randomEncounter}
-        </section>
+      <section className='floor-container'>
+        <nav className='floor-controls'>
+        </nav>
+        <section className='encounter-grid'>
+          <button onClick={rollEncounter}className='new-random'>GENERATE ENCOUNTER</button>
+          <section className='encounter'>
+            {randomEncounter}
+          </section>
 
-        <aside className='encounter-sidebar'>
-        <h3 className='encounter-list-title'>ENCOUNTER LIST</h3>
-        <ol className='encounter-list'>
-          <li data-cy='sidebar' >{sideBarList[0]}</li>
-          <li data-cy='sidebar' >{sideBarList[1]}</li>
-          <li data-cy='sidebar' >{sideBarList[2]}</li>
-          <li data-cy='sidebar' >{sideBarList[3]}</li>
-          <li data-cy='sidebar' >{sideBarList[4]}</li>
-        </ol>
-        <div className='responsive-block'></div>
-        </aside>
+          <aside className='encounter-sidebar'>
+          <h3 className='encounter-list-title'>ENCOUNTER LIST</h3>
+          <ol className='encounter-list'>
+            <li data-cy='sidebar' >{sideBarList[0]}</li>
+            <li data-cy='sidebar' >{sideBarList[1]}</li>
+            <li data-cy='sidebar' >{sideBarList[2]}</li>
+            <li data-cy='sidebar' >{sideBarList[3]}</li>
+            <li data-cy='sidebar' >{sideBarList[4]}</li>
+          </ol>
+          <div className='responsive-block'></div>
+          </aside>
+        </section>
       </section>
-    </section>
+    </>
   )
 }
 
