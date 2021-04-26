@@ -22,13 +22,12 @@ const Test = ({ encounter }) => {
   return(
     <section className='test-response'>
       <h2 data-cy='singleName'>{singleName}</h2>
-      <div data-cy='singleEncounter'>
+      <div>
         <p>{encounter.description}</p>
-        <p>{encounter.name}</p>
+        <p data-cy='randomName'>{encounter.name}</p>
       </div>
     </section>
   )
-
 }
 
 export default Test;

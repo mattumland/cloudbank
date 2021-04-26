@@ -65,12 +65,36 @@ describe('Cloudbank Saved Page', () => {
 
   it('Should allow users to delete a saved encounter', () => {
     cy.get('[data-cy=delete]').click();
-    cy.get('.error-message').contains('No encounters have been saved')
+    cy.get('.saved-message').contains('No encounters have been saved')
   })
 
   it('Should show a message if there are no saved encounters', () => {
     cy.get('[data-cy=delete]').click();
-    cy.get('.error-message').contains('No encounters have been saved')
+    cy.get('.saved-message').contains('No encounters have been saved')
   })
 
+})
+
+describe('Async Testing', () => {
+  beforeEach(() => {
+    cy.visit('http://localhost:3000/test')
+  })
+
+  it('Should display Pechetti when a specific ID is fetched', () => {
+    cy.get('[data-cy=singleName').contains('Pechetti');
+  })
+
+  it('Should fetch a random name when tags are added to an encounter', () => {
+    cy.get('[data-cy=randomName').should('be.visible');
+  })
+
+  it(`Should display a default name ('Mummy') if a fetch fails`, () => {
+    cy.intercept('http://stapi.co/api/v1/rest/character?uid=CHMA0000021696', {})
+    cy.get('[data-cy=singleName').contains('Mummy');
+  })
+
+  it(`Should display an name when given a character object`, () => {
+    cy.intercept('http://stapi.co/api/v1/rest/character?uid=CHMA0000021696', { fixture: 'alt_character.json' })
+    cy.get('[data-cy=singleName').contains('Eddie Newsom');
+  })
 })
