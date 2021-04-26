@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import Floor from '../Floor/Floor';
 import Saved from '../Saved/Saved';
 import Test from '../Test/Test';
+import Message from '../Message/Message';
 import { floors } from '../../data/gdData';
 import { fetchName } from '../../data/apiCaller';
 import { cleanNameData, getID } from '../../utilities';
@@ -56,12 +57,19 @@ class App extends Component {
   componentDidMount() {
   };
 
-
   render() {
     return (
       <main className='App'>
         <Header />
         <Switch >
+          <Route
+            exact path="/"
+            render={() => {
+              return <Message
+                error={this.state.error}
+              />}}
+          />
+
           <Route
             exact path="/test"
             render={() => {
@@ -90,10 +98,6 @@ class App extends Component {
                 addEncounter={this.addEncounter}
               />}}
             />
-
-
-
-
         </Switch>
       </main>
     )
