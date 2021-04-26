@@ -34,7 +34,7 @@ const Encounter = ({ floor, eData, list, addEncounter, deleteEncounter }) => {
     if (count === 1) {
       description =`A ${eData.description}`
     } else if (count > 1) {
-      description =`${count} ${eData.description}s`;
+      description =`${count} ${eData.description}`;
     } else {
       description= eData.description;
     }
@@ -95,10 +95,12 @@ const Encounter = ({ floor, eData, list, addEncounter, deleteEncounter }) => {
 
   return (
     <aside className='encounter-container'>
-      <h2 className='description'>{`${description} ${reference}`}</h2>
-      {eData.name && (
-      <h2 className='name-tag'>{eData.name}</h2>)
-      }
+        <div className='primary-text'>
+        <h2 className='description'>{`${description} ${reference}`}</h2>
+        {eData.name && (
+        <h2 className='name-tag'>{eData.name}</h2>)
+        }
+      </div>
       {eData.tags!=='short' && (
       <div className='situation-container'>
         <h3>{`Location - ${distance}`}</h3>

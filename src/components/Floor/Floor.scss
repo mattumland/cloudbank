@@ -1,63 +1,46 @@
 @import '../../index.scss';
 
-.floor-container {
-  // @include floorBorder;
-  width: 70%;
-  margin: 0 auto;
-}
 
 .floor-title {
-  background: $gdGreenSolid;
-  color: white;
-  text-align: center;
-  font-size: 30px;
-  padding: 0 0 10px 0;
-  grid-area: 1 / 1 / 2 / 2;
+  @include floorTitle
 }
 
-.floor-controls {
-  // @include floorBorder;
-  // margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  text-align: left;
-
-  button {
-    border: none;
-    width: 45vw;
-    height: 50px;
-    font-size: 20px;
-
-  }
-}
   .encounter-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: .25fr 1fr;
+    grid-template-columns: 1fr .5fr;
+    grid-template-rows: .25fr 2fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    width: 70%;
+    margin: 0 auto;
   }
 
-  .encounter-sidebar {
-    grid-area: 2 / 2 / 3 / 3;
-    // grid-area: 1 / 2 / 3 / 3;;
-  }
+  // .encounter-sidebar {
+  //   grid-area: 2 / 2 / 3 / 3;
+  //   // grid-area: 1 / 2 / 3 / 3;;
+  // }
 
   .encounter-list-title {
+    grid-area: 1 / 2 / 2 / 3;
     width: 100%;
-    font-size: 20px;
-    text-align: center;
+    max-height: 40px;
     background: $gdGreenSolid;
-    color:white;
+    color: white;
+    font-size: 20px;
+    border: solid $gdGreenSolid 5px;
+    margin: 15px 0 -5px 0;
+    text-align: center;
   }
 
   .encounter-list {
+    grid-area: 2 / 2 / 3 / 3;
     width: 100%;
-    font-size: 14px;
-    text-align: left;
+    height: 100%;
+    font-size: 16px;
+    text-align: center;
     background: black;
     color:white;
-    border: $gdGreenSolid solid 3px;
+    border: $gdGreenSolid solid 5px;
 
     li {
       margin:10px;
@@ -66,15 +49,17 @@
 
   .encounter {
     grid-area: 2 / 1 / 3 / 2;
+    width: 100%;
+    height: 100%;
   }
 
   .new-random {
-    grid-area: 1 / 1 / 2 / 3;;
+    grid-area:  1 / 1 / 2 / 2;
     width: 100%;
     max-height: 40px;
     background: $gdGreen;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     border: solid $gdGreenSolid 5px;
-  margin: 15px 0 -5px 0;
+    margin: 15px 0 -5px 0;
   }

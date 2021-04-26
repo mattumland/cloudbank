@@ -1,13 +1,19 @@
 @import '../../index.scss';
 
 .encounter-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   width: 100%;
+  height: 100%;
   background: black;
-  border: solid $gdGreenSolid 6px;
+  border: solid $gdGreenSolid 5px;
   padding: 10px;
-  // @include encounterMarg;
 
   .description {
+    grid-area: 1 / 1 / 2 / 2;
     font-size: 18px;
     text-align: center;
     margin-bottom: 6px;
@@ -15,6 +21,7 @@
   }
 
   .name-tag {
+    grid-area: 1 / 1 / 2 / 2;
     font-size: 16px;
     text-align: center;
     margin-bottom: 10px;
@@ -29,6 +36,7 @@
   }
 
   .situation-container {
+    grid-area: 2 / 1 / 3 / 2;
     width: 95%;
     border: solid $gdGreen 2px;
     margin: 0 auto;
@@ -36,6 +44,7 @@
   }
 
   .btn-container {
+    grid-area: 3 / 1 / 4 / 2;
     width: 95%;
     margin: 0 auto;
     display: flex;
@@ -45,6 +54,5 @@
   button {
     width: 40%;
     padding: 2px;
-    // margin: 8px;
   }
 }

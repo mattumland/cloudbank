@@ -4,8 +4,6 @@ import './Saved.scss'
 
 const Saved = ({ encounterLists, deleteEncounter, addEncounter }) => {
 
-  // console.log(encounterLists)
-
   const encounterKeys = Object.keys(encounterLists).filter(key => {
     return encounterLists[key].saved.length
   });
@@ -15,8 +13,6 @@ const Saved = ({ encounterLists, deleteEncounter, addEncounter }) => {
     list = list.concat(paritalList);
     return list;
   }, [])
-
-  // console.log(encounterData);
 
   const savedEncounters = encounterData.map((encounter, index) => {
     return (
@@ -31,16 +27,16 @@ const Saved = ({ encounterLists, deleteEncounter, addEncounter }) => {
     )
   })
 
-  //user effect to rerender if list changes
-  //pass delete func as prop
+  const savedMessage = savedEncounters.length ? 'Saved encounters': "No encounters have been saved"
+console.log(savedMessage);
 
   return(
-    <section>
-      {!savedEncounters.length && (
-        <h2 className='error-message'>No encounters have been saved</h2>
-      )}
-      {savedEncounters}
-    </section>
+    <>
+      <h2 className='saved-message'>{savedMessage}</h2>
+      <section className='saved-list'>
+        {savedEncounters}
+      </section>
+    </>
   )
 }
 
