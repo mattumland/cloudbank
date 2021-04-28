@@ -51,10 +51,10 @@ const Floor = ({ floorID, floorName, encounterData, encounterList, addEncounter}
     createSideBar();
   },[])
 
-  useEffect(() => {
-    rollEncounter();
-    createSideBar();
-  },[location.pathname])
+  // useEffect(() => {
+  //   rollEncounter();
+  //   createSideBar();
+  // },[location.pathname])
 
   return (
     <>
