@@ -20,13 +20,13 @@ https://frontend.turing.edu/projects/module-3/niche-audience.html
 ![](assets/README-8ae2f32e.png)
 
 ## Project Goals
-2. Create multipage app using Router.
-3. Make network requests to API endpoints to retrieve and manipulate data.
-4. Use Object Oriented Programming (OOP) to drive the design of the application and the code.
-5. Create a test suite using Cypress that thoroughly tests all the functional aspects of the application.
-6. Ensure the app is following best accessibility practices.
-7. Leverage SASS to DRY up CSS.
-8. Make the app responsive so that content can be viewed on all devices.
+1. Create multipage app using Router.
+2. Make network requests to API endpoints to retrieve and manipulate data.
+3. Use Object Oriented Programming (OOP) to drive the design of the application and the code.
+4. Create a test suite using Cypress that thoroughly tests all the functional aspects of the application.
+5. Ensure the app is following best accessibility practices.
+6. Leverage SASS to DRY up CSS.
+7. Make the app responsive so that content can be viewed on all devices.
 
 ## Installation
 1. Clone down this repo.
