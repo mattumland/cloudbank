@@ -20,7 +20,6 @@ https://frontend.turing.edu/projects/module-3/niche-audience.html
 ![](assets/README-8ae2f32e.png)
 
 ## Project Goals
-1. Learn React Context API through an app of our design.
 2. Create multipage app using Router.
 3. Make network requests to API endpoints to retrieve and manipulate data.
 4. Use Object Oriented Programming (OOP) to drive the design of the application and the code.
